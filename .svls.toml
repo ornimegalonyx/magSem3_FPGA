@@ -1,0 +1,5 @@
+[verilog]
+include_paths = ["src/pkg"]
+
+[option]
+linter = true
