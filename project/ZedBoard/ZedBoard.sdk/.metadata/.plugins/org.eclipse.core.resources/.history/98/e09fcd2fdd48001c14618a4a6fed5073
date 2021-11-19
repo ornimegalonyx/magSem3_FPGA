@@ -1,0 +1,114 @@
+#include <mtds.h>
+#include <MyDisp.h>
+#include <stdint.h>
+#include <string.h>
+#include "sleep.h"
+
+#include "xil_cache.h"
+#include "xparameters.h"
+
+#define MAX_WIDTH 240
+#define MAX_HEIGHT 320
+
+MDFNG rgfng[2];
+uint32_t curPen = penSolid;
+uint32_t curColor = clrBlack;
+uint32_t curBackground = clrWhite;
+uint32_t curForeground = clrBlack;
+
+void setup() {
+	while (true) {
+		if (mydisp.begin()) {
+			xil_printf("mydisp.begin() succeeded\n\r");
+			break;
+		}
+		else {
+			xil_printf("mydisp.begin() failed\n\r");
+			sleep(1);
+		}
+	}
+}
+
+void paint();
+void checkTouch();
+
+int main() {
+	setup();
+	mydisp.clearDisplay(curBackground);
+	while (1) {
+		checkTouch();
+		// xil_printf("Finger 1: st = %d, x = %d, y = %d\n", rgfng[0].st,
+		// 	rgfng[0].x, rgfng[0].y);
+		// xil_printf("Finger 2: st = %d, x = %d, y = %d\n", rgfng[1].st,
+		// 	rgfng[1].x, rgfng[1].y);
+		paint();
+		usleep(1000);
+	}
+	return 0;
+}
+
+void paint() {
+	mydisp.setPen(curPen);
+	mydisp.setBackground(curBackground);
+	mydisp.setForeground(curForeground);
+	mydisp.setTransparency(false);
+
+	mydisp.setForeground(~mydisp.getPixel(MAX_WIDTH - 2, MAX_HEIGHT - 2));
+	mydisp.drawRectangle(false, MAX_WIDTH - 30, MAX_HEIGHT - 30, MAX_WIDTH - 1, MAX_HEIGHT - 1);
+
+	mydisp.setForeground(curColor);
+	mydisp.setPen(penNull);
+	mydisp.drawEllipse(true, MAX_WIDTH - 30 + 2, MAX_HEIGHT - 30 + 3, MAX_WIDTH - 2, MAX_HEIGHT - 3);
+
+	if (rgfng[0].st == FINGER_DOWN && rgfng[0].x > MAX_WIDTH - 30 && rgfng[0].y > MAX_HEIGHT - 30) {
+		mydisp.clearDisplay(curBackground);
+		xil_printf("ERASE!!!\n");
+		return;
+	}
+	if (rgfng[0].st == FINGER_MOVE) {
+		mydisp.setPixel(rgfng[0].x, rgfng[0].y, curColor);
+	}
+
+}
+
+void checkTouch() {
+	MTCH mtch;
+
+	if (mtds.GetMsgStatus() == 0) {
+		return;
+	}
+
+	mtds.GetMsg((MEVT*)&mtch);
+
+	if ((mtch.msg < msgFingerFirst) || (mtch.msg > msgFingerLast)) {
+		return;
+	}
+
+	if ((mtch.msg >= msgFinger1Down) && (mtch.msg <= msgFinger1Up)) {
+		rgfng[0].x = mtch.xco;
+		rgfng[0].y = mtch.yco;
+		if (mtch.msg == msgFinger1Down) {
+			rgfng[0].st = FINGER_DOWN;
+		}
+		else if (mtch.msg == msgFinger1Move) {
+			rgfng[0].st = FINGER_MOVE;
+		}
+		else {
+			rgfng[0].st = FINGER_UP;
+		}
+	}
+
+	if ((mtch.msg >= msgFinger2Down) && (mtch.msg <= msgFinger2Up)) {
+		rgfng[1].x = mtch.xco;
+		rgfng[1].y = mtch.yco;
+		if (mtch.msg == msgFinger2Down) {
+			rgfng[1].st = FINGER_DOWN;
+		}
+		else if (mtch.msg == msgFinger2Move) {
+			rgfng[1].st = FINGER_MOVE;
+		}
+		else {
+			rgfng[1].st = FINGER_UP;
+		}
+	}
+}

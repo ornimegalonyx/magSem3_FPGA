@@ -1,0 +1,166 @@
+#include <mtds.h>
+#include <MyDisp.h>
+#include <stdint.h>
+#include <string.h>
+#include "sleep.h"
+
+#include "xil_cache.h"
+#include "xparameters.h"
+
+void setup() {
+	bool fStat;
+
+	while (true) {
+		fStat = mydisp.begin();
+		if (fStat) {
+			xil_printf("mydisp.begin() succeeded\n\r");
+			break;
+		} else {
+			xil_printf("mydisp.begin() failed\n\r");
+			sleep(1);
+		}
+	}
+}
+
+void paint();
+void test();
+
+int main() {
+	setup();
+	while (1) {
+		paint();
+	}
+	return 0;
+}
+
+void paint() {
+//   mydisp.clearDisplay(clrBlack);
+
+	test();
+	usleep(100000);
+}
+
+void test() {
+	int xco;
+	uint32_t clr;
+
+	mydisp.setForeground(clrWhite);
+	mydisp.setBackground(clrBlack);
+	mydisp.setPen(penSolid);
+	mydisp.setTransparency(false);
+
+	/* Demonstrate setPixel and getPixel
+	 */
+	/* This will draw a red horizontal line at y=20 by setting pixels while
+	 ** incrementing x.
+	 */
+//   for (xco = 10; xco < 230; xco++) {
+//      mydisp.setPixel(xco, 20, clrRed);
+//   }
+	/* Read back the first pixel set by the above loop. The value returned will
+	 ** be the color of the specified pixel, which in this case will be clrRed as
+	 ** set above.
+	 */
+//	clr = mydisp.getPixel(10, 20);
+//	xil_printf(" Pixel color = ");
+//	xil_printf("0x%x\n\r", clr);
+
+	/* This will draw a horizontal line at y=30. The color is what was read back
+	 ** from the display using getPixel(), so it will be red as well.
+	 */
+	for (xco = 10; xco < 230; xco++) {
+		mydisp.setPixel(xco, 30, clr);
+	}
+
+	/* Demonstrate drawLine
+	 */
+	/* The foreground color was set to clrWhite above, so the first couple of
+	 ** diagonal lines will be white.
+	 */
+	mydisp.drawLine(10, 30, 230, 100);
+	mydisp.drawLine(230, 30, 10, 100);
+
+	/* Setting the foreground color to clrBlue will cause a couple of blue
+	 ** vertical lines to be drawn connecting the ends of the diagonal lines.
+	 */
+	mydisp.setForeground(clrBlue);
+	mydisp.drawLine(10, 30, 10, 100);
+	mydisp.drawLine(230, 30, 230, 100);
+
+	/* And now a green line will be drawn, connecting the diagonal lines at the
+	 ** bottom.
+	 */
+	mydisp.setForeground(clrGreen);
+	mydisp.drawLine(10, 100, 230, 100);
+
+	/* Demonstrate drawArc. An arc is specified by the upper left corner and
+	 ** lower right corner of a bounding rectangle, which defines the ellipse. The
+	 ** arc section of the defining ellipse is specified by a pair of radial lines
+	 ** specifying the beginning and ending angles. In this case, the corners of
+	 ** the bounding rectangle are the same as the endpoints of the white diagonal
+	 ** lines we draw above. The beginning and ending angles are specified by the
+	 ** endpoints of the diagonal lines as well, so the arc will begin at one of
+	 ** the diagonal lines and end at the other one. The arc will be drawn with a
+	 ** dark yellow color.
+	 */
+	mydisp.setPen(penSolid);
+	mydisp.setForeground(clrDkYellow);
+	mydisp.drawArc(10, 30, 230, 100, 10, 100, 230, 100);
+
+	/* Demonstrate drawRectangle. We set the pen to penDash, the foreground color
+	 ** to dark yellow and the background color to clrRed. This will cause the
+	 ** perimeter of the rectangle to be drawn with a dashed line alternating
+	 ** between dark yellow and red. When the first rectangle is drawn, fill is
+	 ** suppressed, so only the outline is drawn.
+	 **
+	 ** A second rectangle is drawn inside the first one. By setting the pen to
+	 ** penNull, this suppresses drawing the perimeter of the rectangle. By
+	 ** setting the foreground color to clrDkGray and specifying to fill when the
+	 ** rectangle is drawn, we get a solid dark gray rectangle with no border
+	 ** around it.
+	 */
+	mydisp.setPen(penDash);
+	mydisp.setForeground(clrDkYellow);
+	mydisp.setBackground(clrRed);
+	mydisp.drawRectangle(false, 20, 120, 220, 190);
+	mydisp.setPen(penNull);
+	mydisp.setForeground(clrDkGray);
+	mydisp.drawRectangle(true, 25, 125, 215, 185);
+
+	/* Demonstrate drawText. This will draw a green text string with a black
+	 ** background in the middle of the rectangles drawn above. Background
+	 ** transparency was set to off, so the black background is drawn. If
+	 ** transparency had been set to true, this would give a green text string on
+	 ** the dark gray background of the rectangle.
+	 **
+	 ** Note: There is a bug in display device firmware version 1.04 that will
+	 ** cause the text colors to be incorrect if the pen is set to penNull. Ensure
+	 ** that the pen is not set to penNull before drawing text.
+	 */
+	mydisp.setPen(penSolid);
+	mydisp.setForeground(clrGreen);
+	mydisp.setBackground(clrBlack);
+	mydisp.drawText((char*) "This is some text", 50, 150);
+
+	/* Demonstrate drawEllipse. This is very similar to the rectangles drawn
+	 ** above. A dash pen is selected with foreground color of dark red and
+	 ** background color of dark yellow. An ellipse is specified by giving the
+	 ** upper left and lower right corners of a bounding rectangle. The ellipse is
+	 ** drawn tangent to the rectangle.
+	 **
+	 ** In the first case, the ellipse is drawn with a dashed, dark red and dark
+	 ** yellow line. Filling the ellipse is suppressed, so only the perimeter is
+	 ** drawn.
+	 **
+	 ** The second ellipse is drawn inside the first. In this case, drawing the
+	 ** perimeter is suppressed by selecting penNull and fill is specified, so we
+	 ** get a dark gray ellipse with the perimeter not drawn.
+	 */
+	mydisp.setPen(penDash);
+	mydisp.setForeground(clrDkRed);
+	mydisp.setBackground(clrDkYellow);
+	mydisp.drawEllipse(false, 20, 200, 220, 300);
+	mydisp.setPen(penNull);
+	mydisp.setForeground(clrDkGray);
+	mydisp.drawEllipse(true, 25, 205, 215, 295);
+}

@@ -1,0 +1,120 @@
+#include <mtds.h>
+#include <MyDisp.h>
+#include <stdint.h>
+#include <string.h>
+#include "sleep.h"
+
+#include "xil_cache.h"
+#include "xparameters.h"
+
+#define __MTDSTRACE__
+
+void setup() {
+	bool fStat;
+
+	while (true) {
+		fStat = mydisp.begin();
+		if (fStat) {
+			xil_printf("mydisp.begin() succeeded\n\r");
+			break;
+		} else {
+			xil_printf("mydisp.begin() failed\n\r");
+			sleep(1);
+		}
+	}
+}
+
+void checkTouch() {
+	MTCH		mtch;
+	int			idBtn;
+
+	/* See if there is anything in the event queue.
+	*/
+	if (!fInitialized || mtds.GetMsgStatus() == 0) {
+		/* Nothing in the queue, so we're done.
+		*/
+		return;
+	}
+
+	/* There is something in the queue. See what we have.
+	*/
+	mtds.GetMsg((MEVT *)&mtch);
+#if !defined(__SIM__)
+#if defined(__MTDSTRACE__)
+	Serial.print("MTCH: tms = ");
+	Serial.print(mtch.tms, DEC);
+	Serial.print(" hwin = ");
+	Serial.print(mtch.hwin, HEX);
+	Serial.print(" msg = ");
+	Serial.println(mtch.msg, HEX);
+	Serial.print("  xco = ");
+	Serial.print(mtch.xco, DEC);
+	Serial.print(" yco = ");
+	Serial.print(mtch.yco, DEC);
+	Serial.print(" wgt = ");
+	Serial.print(mtch.wgt, DEC);
+	Serial.print(" spd = ");
+	Serial.println(mtch.spd, DEC);
+#endif
+#endif
+
+	if ((mtch.msg < msgFingerFirst) || (mtch.msg > msgFingerLast)) {
+		/* This library assumes that there is not anything of interest in the queue
+		** other than touch messages. It throws away any messages seen except
+		** touch messages.
+		*/
+		return;
+	}
+
+	/* It is a touch message.
+	** First, update the finger tracking structures.
+	*/
+	if ((mtch.msg >= msgFinger1Down) && (mtch.msg <= msgFinger1Up)) {
+		rgfng[0].x = mtch.xco;
+		rgfng[0].y = mtch.yco;
+		if (mtch.msg == msgFinger1Down) {
+			rgfng[0].st = FINGER_DOWN;
+		}
+		else if (mtch.msg == msgFinger1Move) {
+			rgfng[0].st = FINGER_MOVE;
+		}
+		else {
+			rgfng[0].st = FINGER_UP;
+		}
+	}
+
+	if ((mtch.msg >= msgFinger2Down) && (mtch.msg <= msgFinger2Up)) {
+		rgfng[1].x = mtch.xco;
+		rgfng[1].y = mtch.yco;
+		if (mtch.msg == msgFinger2Down) {
+			rgfng[1].st = FINGER_DOWN;
+		}
+		else if (mtch.msg == msgFinger2Move) {
+			rgfng[1].st = FINGER_MOVE;
+		}
+		else {
+			rgfng[1].st = FINGER_UP;
+		}
+	}
+
+void paint();
+void test();
+
+int main() {
+	setup();
+	while (1) {
+		paint();
+	}
+	return 0;
+}
+
+void paint() {
+//   mydisp.clearDisplay(clrBlack);
+
+	test();
+	usleep(100000);
+}
+
+void test() {
+
+}

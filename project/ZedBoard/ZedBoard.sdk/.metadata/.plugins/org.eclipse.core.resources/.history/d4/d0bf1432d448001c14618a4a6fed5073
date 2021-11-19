@@ -1,0 +1,45 @@
+#include <mtds.h>
+#include <MyDisp.h>
+#include <stdint.h>
+#include <string.h>
+#include "sleep.h"
+
+#include "xil_cache.h"
+#include "xparameters.h"
+
+void setup() {
+	bool fStat;
+
+	while (true) {
+		fStat = mydisp.begin();
+		if (fStat) {
+			xil_printf("mydisp.begin() succeeded\n\r");
+			break;
+		} else {
+			xil_printf("mydisp.begin() failed\n\r");
+			sleep(1);
+		}
+	}
+}
+
+void paint();
+void test();
+
+int main() {
+	setup();
+	while (1) {
+		paint();
+	}
+	return 0;
+}
+
+void paint() {
+//   mydisp.clearDisplay(clrBlack);
+
+	test();
+	usleep(100000);
+}
+
+void test() {
+
+}
