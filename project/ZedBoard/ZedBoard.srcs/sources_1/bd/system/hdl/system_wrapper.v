@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Fri Nov 19 02:30:04 2021
-//Host        : Pavel-PC running 64-bit major release  (build 9200)
+//Date        : Sun Nov 21 05:40:52 2021
+//Host        : DESKTOP-3GDJ0OK running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
 //Purpose     : IP block netlist
@@ -32,6 +32,7 @@ module system_wrapper
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
     btns_5bits_tri_i,
+    h_sync,
     ja_pin10_io,
     ja_pin1_io,
     ja_pin2_io,
@@ -41,7 +42,11 @@ module system_wrapper
     ja_pin8_io,
     ja_pin9_io,
     leds_8bits_tri_o,
-    sws_8bits_tri_i);
+    sws_8bits_tri_i,
+    v_sync,
+    vga_b,
+    vga_g,
+    vga_r);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -64,6 +69,7 @@ module system_wrapper
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
   input [4:0]btns_5bits_tri_i;
+  output h_sync;
   inout ja_pin10_io;
   inout ja_pin1_io;
   inout ja_pin2_io;
@@ -74,6 +80,10 @@ module system_wrapper
   inout ja_pin9_io;
   output [7:0]leds_8bits_tri_o;
   input [7:0]sws_8bits_tri_i;
+  output v_sync;
+  output [3:0]vga_b;
+  output [3:0]vga_g;
+  output [3:0]vga_r;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -97,6 +107,7 @@ module system_wrapper
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
   wire [4:0]btns_5bits_tri_i;
+  wire h_sync;
   wire ja_pin10_i;
   wire ja_pin10_io;
   wire ja_pin10_o;
@@ -131,6 +142,10 @@ module system_wrapper
   wire ja_pin9_t;
   wire [7:0]leds_8bits_tri_o;
   wire [7:0]sws_8bits_tri_i;
+  wire v_sync;
+  wire [3:0]vga_b;
+  wire [3:0]vga_g;
+  wire [3:0]vga_r;
 
   IOBUF ja_pin10_iobuf
        (.I(ja_pin10_o),
@@ -195,6 +210,7 @@ module system_wrapper
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .btns_5bits_tri_i(btns_5bits_tri_i),
+        .h_sync(h_sync),
         .ja_pin10_i(ja_pin10_i),
         .ja_pin10_o(ja_pin10_o),
         .ja_pin10_t(ja_pin10_t),
@@ -220,5 +236,9 @@ module system_wrapper
         .ja_pin9_o(ja_pin9_o),
         .ja_pin9_t(ja_pin9_t),
         .leds_8bits_tri_o(leds_8bits_tri_o),
-        .sws_8bits_tri_i(sws_8bits_tri_i));
+        .sws_8bits_tri_i(sws_8bits_tri_i),
+        .v_sync(v_sync),
+        .vga_b(vga_b),
+        .vga_g(vga_g),
+        .vga_r(vga_r));
 endmodule
