@@ -30,38 +30,20 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_xbar_0 |
 # IP: bd/system/ip/system_VGA_0_0/system_VGA_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_VGA_0_0 || ORIG_REF_NAME==system_VGA_0_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_blk_mem_gen_0_0/system_blk_mem_gen_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_blk_mem_gen_0_0 || ORIG_REF_NAME==system_blk_mem_gen_0_0} -quiet] -quiet
+# IP: bd/system/ip/system_system_ila_0_0/system_system_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_system_ila_0_0 || ORIG_REF_NAME==system_system_ila_0_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_axi_bram_ctrl_0_0/system_axi_bram_ctrl_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_bram_ctrl_0_0 || ORIG_REF_NAME==system_axi_bram_ctrl_0_0} -quiet] -quiet
+# IP: bd/system/ip/system_s00_mmu_0/system_s00_mmu_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_s00_mmu_0 || ORIG_REF_NAME==system_s00_mmu_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_blk_mem_gen_1_0/system_blk_mem_gen_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_blk_mem_gen_1_0 || ORIG_REF_NAME==system_blk_mem_gen_1_0} -quiet] -quiet
-
-# IP: bd/system/ip/system_axi_bram_ctrl_1_0/system_axi_bram_ctrl_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_bram_ctrl_1_0 || ORIG_REF_NAME==system_axi_bram_ctrl_1_0} -quiet] -quiet
-
-# IP: bd/system/ip/system_blk_mem_gen_2_0/system_blk_mem_gen_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_blk_mem_gen_2_0 || ORIG_REF_NAME==system_blk_mem_gen_2_0} -quiet] -quiet
-
-# IP: bd/system/ip/system_axi_bram_ctrl_2_0/system_axi_bram_ctrl_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_bram_ctrl_2_0 || ORIG_REF_NAME==system_axi_bram_ctrl_2_0} -quiet] -quiet
-
-# IP: bd/system/ip/system_auto_ds_8/system_auto_ds_8.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_ds_8 || ORIG_REF_NAME==system_auto_ds_8} -quiet] -quiet
-
-# IP: bd/system/ip/system_auto_ds_7/system_auto_ds_7.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_ds_7 || ORIG_REF_NAME==system_auto_ds_7} -quiet] -quiet
-
-# IP: bd/system/ip/system_auto_ds_6/system_auto_ds_6.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_ds_6 || ORIG_REF_NAME==system_auto_ds_6} -quiet] -quiet
-
-# IP: bd/system/ip/system_auto_pc_5/system_auto_pc_5.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_5 || ORIG_REF_NAME==system_auto_pc_5} -quiet] -quiet
+# IP: bd/system/ip/system_auto_pc_6/system_auto_pc_6.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_6 || ORIG_REF_NAME==system_auto_pc_6} -quiet] -quiet
 
 # IP: bd/system/ip/system_auto_ds_5/system_auto_ds_5.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_ds_5 || ORIG_REF_NAME==system_auto_ds_5} -quiet] -quiet
+
+# IP: bd/system/ip/system_auto_pc_5/system_auto_pc_5.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_5 || ORIG_REF_NAME==system_auto_pc_5} -quiet] -quiet
 
 # IP: bd/system/ip/system_auto_ds_4/system_auto_ds_4.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_ds_4 || ORIG_REF_NAME==system_auto_ds_4} -quiet] -quiet
@@ -93,8 +75,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_ds_
 # IP: bd/system/ip/system_auto_pc_0/system_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_0 || ORIG_REF_NAME==system_auto_pc_0} -quiet] -quiet
 
-# IP: bd/system/ip/system_auto_pc_6/system_auto_pc_6.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_6 || ORIG_REF_NAME==system_auto_pc_6} -quiet] -quiet
+# IP: bd/system/ip/system_auto_pc_7/system_auto_pc_7.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_pc_7 || ORIG_REF_NAME==system_auto_pc_7} -quiet] -quiet
 
 # IP: bd/system/ip/system_auto_us_0/system_auto_us_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_auto_us_0 || ORIG_REF_NAME==system_auto_us_0} -quiet] -quiet

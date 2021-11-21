@@ -1,0 +1,51 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Nov 19 02:27:46 2021
+# Process ID: 17568
+# Current directory: c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1548 C:\work\miet\mag_sem_3\magSem3_FPGA\project\ZedBoard\ZedBoard.xpr
+# Log file: c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/vivado.log
+# Journal file: c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.xpr
+create_bd_design "system"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+apply_board_connection -board_interface "sws_8bits" -ip_intf "axi_gpio_0/GPIO" -diagram "system" 
+endgroup
+apply_board_connection -board_interface "leds_8bits" -ip_intf "/axi_gpio_0/GPIO2" -diagram "system" 
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_1
+apply_board_connection -board_interface "btns_5bits" -ip_intf "axi_gpio_1/GPIO" -diagram "system" 
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv digilentinc.com:IP:PmodMTDS:1.0 PmodMTDS_0
+apply_board_connection -board_interface "ja" -ip_intf "PmodMTDS_0/MTDS_Pmod_out" -diagram "system" 
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_1/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_gpio_1/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/PmodMTDS_0/AXI_LITE_SPI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins PmodMTDS_0/AXI_LITE_SPI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/PmodMTDS_0/AXI_LITE_GPIO} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins PmodMTDS_0/AXI_LITE_GPIO]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/PmodMTDS_0/AXI_LITE_TIMER} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins PmodMTDS_0/AXI_LITE_TIMER]
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout
+validate_bd_design
+make_wrapper -files [get_files C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/system.bd] -top
+add_files -norecurse C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/hdl/system_wrapper.v
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+file mkdir C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk
+file copy -force C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/impl_1/system_wrapper.sysdef C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper.hdf
+
+launch_sdk -workspace C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk -hwspec C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper.hdf
