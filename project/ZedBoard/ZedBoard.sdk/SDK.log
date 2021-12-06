@@ -3640,3 +3640,728 @@ con
 ----------------End of Script----------------
 
 11:58:09 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+12:20:40 INFO  : Disconnected from the channel tcfchan#67.
+23:04:44 INFO  : Registering command handlers for SDK TCF services
+23:04:45 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\temp_xsdb_launch_script.tcl
+23:04:49 INFO  : XSCT server has started successfully.
+23:04:49 INFO  : Successfully done setting XSCT server connection channel  
+23:04:52 INFO  : Successfully done setting SDK workspace  
+23:04:52 INFO  : Processing command line option -hwspec C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper.hdf.
+23:04:52 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_0.
+01:48:17 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1638742904960,  Project:1637473344431
+01:48:17 INFO  : Project system_wrapper_hw_platform_0's source hardware specification located at C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+01:48:25 INFO  : Project system_wrapper_hw_platform_0's source hardware specification location will not be monitored anymore.
+01:48:42 INFO  : Registering command handlers for SDK TCF services
+01:48:42 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\temp_xsdb_launch_script.tcl
+01:48:47 INFO  : XSCT server has started successfully.
+01:48:47 INFO  : Successfully done setting XSCT server connection channel  
+01:48:50 INFO  : Successfully done setting SDK workspace  
+01:48:50 INFO  : Processing command line option -hwspec C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper.hdf.
+02:12:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:12:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:12:26 INFO  : FPGA configured successfully with bitstream "C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+02:12:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:12:31 INFO  : 'fpga -state' command is executed.
+02:12:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:12:32 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:12:32 INFO  : 'jtag frequency' command is executed.
+02:12:32 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:12:32 INFO  : Context for 'APU' is selected.
+02:12:32 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:12:32 INFO  : 'configparams force-mem-access 1' command is executed.
+02:12:32 INFO  : Context for 'APU' is selected.
+02:12:32 INFO  : 'stop' command is executed.
+02:12:32 INFO  : 'ps7_init' command is executed.
+02:12:32 INFO  : 'ps7_post_config' command is executed.
+02:12:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:12:32 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:12:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:12:32 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:12:32 INFO  : 'configparams force-mem-access 0' command is executed.
+02:12:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:12:33 INFO  : Memory regions updated for context APU
+02:12:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:12:33 INFO  : 'con' command is executed.
+02:12:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:12:33 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:13:40 INFO  : Disconnected from the channel tcfchan#1.
+02:18:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:18:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:18:31 INFO  : FPGA configured successfully with bitstream "C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+02:18:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:18:36 INFO  : 'fpga -state' command is executed.
+02:18:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:18:37 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:18:37 INFO  : 'jtag frequency' command is executed.
+02:18:37 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:18:37 INFO  : Context for 'APU' is selected.
+02:18:37 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:18:37 INFO  : 'configparams force-mem-access 1' command is executed.
+02:18:37 INFO  : Context for 'APU' is selected.
+02:18:37 INFO  : 'stop' command is executed.
+02:18:37 INFO  : 'ps7_init' command is executed.
+02:18:37 INFO  : 'ps7_post_config' command is executed.
+02:18:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:18:38 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:18:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:18:38 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:18:38 INFO  : 'configparams force-mem-access 0' command is executed.
+02:18:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:18:38 INFO  : Memory regions updated for context APU
+02:18:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:18:38 INFO  : 'con' command is executed.
+02:18:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:18:38 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:19:56 INFO  : Disconnected from the channel tcfchan#2.
+02:19:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:19:57 INFO  : 'fpga -state' command is executed.
+02:19:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:19:57 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:19:57 INFO  : 'jtag frequency' command is executed.
+02:19:57 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:19:57 INFO  : Context for 'APU' is selected.
+02:19:57 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:19:57 INFO  : 'configparams force-mem-access 1' command is executed.
+02:19:57 INFO  : Context for 'APU' is selected.
+02:19:57 INFO  : 'stop' command is executed.
+02:19:58 INFO  : 'ps7_init' command is executed.
+02:19:58 INFO  : 'ps7_post_config' command is executed.
+02:19:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:19:58 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:19:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:19:58 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:19:58 INFO  : 'configparams force-mem-access 0' command is executed.
+02:19:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:19:58 INFO  : Memory regions updated for context APU
+02:19:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:19:58 INFO  : 'con' command is executed.
+02:19:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:19:58 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:20:10 INFO  : Disconnected from the channel tcfchan#3.
+02:20:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:20:12 INFO  : 'fpga -state' command is executed.
+02:20:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:20:12 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:20:12 INFO  : 'jtag frequency' command is executed.
+02:20:12 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:20:12 INFO  : Context for 'APU' is selected.
+02:20:12 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:20:12 INFO  : 'configparams force-mem-access 1' command is executed.
+02:20:12 INFO  : Context for 'APU' is selected.
+02:20:12 INFO  : 'stop' command is executed.
+02:20:12 INFO  : 'ps7_init' command is executed.
+02:20:12 INFO  : 'ps7_post_config' command is executed.
+02:20:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:20:12 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:20:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:20:12 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:20:12 INFO  : 'configparams force-mem-access 0' command is executed.
+02:20:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:20:13 INFO  : Memory regions updated for context APU
+02:20:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:20:13 INFO  : 'con' command is executed.
+02:20:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:20:13 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:20:20 INFO  : Disconnected from the channel tcfchan#4.
+02:20:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:20:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:20:28 INFO  : FPGA configured successfully with bitstream "C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+02:20:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:20:46 INFO  : 'fpga -state' command is executed.
+02:20:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:20:46 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:20:46 INFO  : 'jtag frequency' command is executed.
+02:20:46 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:20:47 INFO  : Context for 'APU' is selected.
+02:20:47 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:20:47 INFO  : 'configparams force-mem-access 1' command is executed.
+02:20:47 INFO  : Context for 'APU' is selected.
+02:20:47 INFO  : 'stop' command is executed.
+02:20:47 INFO  : 'ps7_init' command is executed.
+02:20:47 INFO  : 'ps7_post_config' command is executed.
+02:20:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:20:47 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:20:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:20:47 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:20:47 INFO  : 'configparams force-mem-access 0' command is executed.
+02:20:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:20:47 INFO  : Memory regions updated for context APU
+02:20:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:20:48 INFO  : 'con' command is executed.
+02:20:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:20:48 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:21:13 INFO  : Disconnected from the channel tcfchan#5.
+02:21:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:21:14 INFO  : 'fpga -state' command is executed.
+02:21:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:21:14 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:21:14 INFO  : 'jtag frequency' command is executed.
+02:21:15 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:21:15 INFO  : Context for 'APU' is selected.
+02:21:15 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:21:15 INFO  : 'configparams force-mem-access 1' command is executed.
+02:21:15 INFO  : Context for 'APU' is selected.
+02:21:15 INFO  : 'stop' command is executed.
+02:21:15 INFO  : 'ps7_init' command is executed.
+02:21:15 INFO  : 'ps7_post_config' command is executed.
+02:21:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:21:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:21:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:21:15 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:21:15 INFO  : 'configparams force-mem-access 0' command is executed.
+02:21:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:21:15 INFO  : Memory regions updated for context APU
+02:21:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:21:15 INFO  : 'con' command is executed.
+02:21:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:21:15 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:22:00 INFO  : Disconnected from the channel tcfchan#6.
+02:22:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:22:01 INFO  : 'fpga -state' command is executed.
+02:22:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:22:02 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:22:02 INFO  : 'jtag frequency' command is executed.
+02:22:02 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:22:02 INFO  : Context for 'APU' is selected.
+02:22:02 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:22:02 INFO  : 'configparams force-mem-access 1' command is executed.
+02:22:02 INFO  : Context for 'APU' is selected.
+02:22:02 INFO  : 'stop' command is executed.
+02:22:02 INFO  : 'ps7_init' command is executed.
+02:22:02 INFO  : 'ps7_post_config' command is executed.
+02:22:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:22:02 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:22:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:22:02 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:22:02 INFO  : 'configparams force-mem-access 0' command is executed.
+02:22:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:22:03 INFO  : Memory regions updated for context APU
+02:22:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:22:03 INFO  : 'con' command is executed.
+02:22:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:22:03 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:24:04 INFO  : Disconnected from the channel tcfchan#7.
+02:24:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:24:10 INFO  : 'fpga -state' command is executed.
+02:24:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:24:10 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:24:10 INFO  : 'jtag frequency' command is executed.
+02:24:10 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:24:10 INFO  : Context for 'APU' is selected.
+02:24:10 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:24:10 INFO  : 'configparams force-mem-access 1' command is executed.
+02:24:10 INFO  : Context for 'APU' is selected.
+02:24:10 INFO  : 'stop' command is executed.
+02:24:10 INFO  : 'ps7_init' command is executed.
+02:24:10 INFO  : 'ps7_post_config' command is executed.
+02:24:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:24:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:24:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:24:11 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:24:11 INFO  : 'configparams force-mem-access 0' command is executed.
+02:24:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:24:11 INFO  : Memory regions updated for context APU
+02:24:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:24:11 INFO  : 'con' command is executed.
+02:24:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:24:11 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:24:36 INFO  : Disconnected from the channel tcfchan#8.
+02:24:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:24:37 INFO  : 'fpga -state' command is executed.
+02:24:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:24:37 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:24:37 INFO  : 'jtag frequency' command is executed.
+02:24:37 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:24:37 INFO  : Context for 'APU' is selected.
+02:24:37 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:24:37 INFO  : 'configparams force-mem-access 1' command is executed.
+02:24:37 INFO  : Context for 'APU' is selected.
+02:24:37 INFO  : 'stop' command is executed.
+02:24:37 INFO  : 'ps7_init' command is executed.
+02:24:37 INFO  : 'ps7_post_config' command is executed.
+02:24:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:24:38 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:24:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:24:38 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:24:38 INFO  : 'configparams force-mem-access 0' command is executed.
+02:24:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:24:38 INFO  : Memory regions updated for context APU
+02:24:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:24:38 INFO  : 'con' command is executed.
+02:24:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:24:38 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:26:37 INFO  : Disconnected from the channel tcfchan#9.
+02:26:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:26:42 INFO  : 'fpga -state' command is executed.
+02:26:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:26:42 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:26:42 INFO  : 'jtag frequency' command is executed.
+02:26:42 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:26:42 INFO  : Context for 'APU' is selected.
+02:26:43 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:26:43 INFO  : 'configparams force-mem-access 1' command is executed.
+02:26:43 INFO  : Context for 'APU' is selected.
+02:26:43 INFO  : 'stop' command is executed.
+02:26:43 INFO  : 'ps7_init' command is executed.
+02:26:43 INFO  : 'ps7_post_config' command is executed.
+02:26:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:26:43 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:26:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:26:43 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:26:43 INFO  : 'configparams force-mem-access 0' command is executed.
+02:26:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:26:43 INFO  : Memory regions updated for context APU
+02:26:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:26:43 INFO  : 'con' command is executed.
+02:26:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:26:43 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:27:42 INFO  : Disconnected from the channel tcfchan#10.
+02:27:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:27:49 INFO  : 'fpga -state' command is executed.
+02:27:52 INFO  : Memory regions updated for context APU
+02:27:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:27:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:27:57 INFO  : FPGA configured successfully with bitstream "C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+02:28:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:28:03 INFO  : 'fpga -state' command is executed.
+02:28:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:28:03 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:28:03 INFO  : 'jtag frequency' command is executed.
+02:28:03 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:28:03 INFO  : Context for 'APU' is selected.
+02:28:03 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:28:03 INFO  : 'configparams force-mem-access 1' command is executed.
+02:28:03 INFO  : Context for 'APU' is selected.
+02:28:03 INFO  : 'stop' command is executed.
+02:28:04 INFO  : 'ps7_init' command is executed.
+02:28:04 INFO  : 'ps7_post_config' command is executed.
+02:28:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:28:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:28:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:28:04 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:28:04 INFO  : 'configparams force-mem-access 0' command is executed.
+02:28:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:28:04 INFO  : Memory regions updated for context APU
+02:28:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:28:04 INFO  : 'con' command is executed.
+02:28:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:28:04 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:31:08 INFO  : Disconnected from the channel tcfchan#11.
+02:33:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+02:33:43 INFO  : 'fpga -state' command is executed.
+02:33:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:33:43 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+02:33:43 INFO  : 'jtag frequency' command is executed.
+02:33:43 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+02:33:43 INFO  : Context for 'APU' is selected.
+02:33:44 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+02:33:44 INFO  : 'configparams force-mem-access 1' command is executed.
+02:33:44 INFO  : Context for 'APU' is selected.
+02:33:44 INFO  : 'stop' command is executed.
+02:33:44 INFO  : 'ps7_init' command is executed.
+02:33:44 INFO  : 'ps7_post_config' command is executed.
+02:33:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:33:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+02:33:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:33:44 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:33:44 INFO  : 'configparams force-mem-access 0' command is executed.
+02:33:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:33:44 INFO  : Memory regions updated for context APU
+02:33:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:33:44 INFO  : 'con' command is executed.
+02:33:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+02:33:44 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+02:45:32 INFO  : Disconnected from the channel tcfchan#12.
+02:48:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:04:38 INFO  : Registering command handlers for SDK TCF services
+03:04:39 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\temp_xsdb_launch_script.tcl
+03:04:42 INFO  : XSCT server has started successfully.
+03:04:42 INFO  : Successfully done setting XSCT server connection channel  
+03:04:45 INFO  : Successfully done setting SDK workspace  
+03:04:45 INFO  : Processing command line option -hwspec C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper.hdf.
+03:04:45 INFO  : Checking for hwspec changes in the project system_wrapper_hw_platform_1.
+03:04:54 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1638749029672,  Project:1638742904960
+03:04:54 INFO  : The hardware specification for project 'system_wrapper_hw_platform_1' is different from C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper.hdf.
+03:04:54 INFO  : Copied contents of C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper.hdf into \system_wrapper_hw_platform_1\system.hdf.
+03:05:01 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+03:05:01 INFO  : Clearing existing target manager status.
+03:05:01 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+03:05:01 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+03:05:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:05:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+03:05:28 INFO  : FPGA configured successfully with bitstream "C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system_wrapper.bit"
+03:05:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+03:05:32 INFO  : 'fpga -state' command is executed.
+03:05:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:05:32 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+03:05:32 INFO  : 'jtag frequency' command is executed.
+03:05:32 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:05:33 INFO  : Context for 'APU' is selected.
+03:05:33 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+03:05:33 INFO  : 'configparams force-mem-access 1' command is executed.
+03:05:33 INFO  : Context for 'APU' is selected.
+03:05:33 INFO  : 'stop' command is executed.
+03:05:33 INFO  : 'ps7_init' command is executed.
+03:05:33 INFO  : 'ps7_post_config' command is executed.
+03:05:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:05:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:05:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:05:33 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:05:33 INFO  : 'configparams force-mem-access 0' command is executed.
+03:05:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:05:34 INFO  : Memory regions updated for context APU
+03:05:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:05:34 INFO  : 'con' command is executed.
+03:05:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+03:05:34 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+03:05:57 INFO  : Disconnected from the channel tcfchan#1.
+03:09:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+03:09:16 INFO  : 'fpga -state' command is executed.
+03:09:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:09:16 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+03:09:16 INFO  : 'jtag frequency' command is executed.
+03:09:16 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:09:17 INFO  : Context for 'APU' is selected.
+03:09:21 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+03:09:21 INFO  : 'configparams force-mem-access 1' command is executed.
+03:09:21 INFO  : Context for 'APU' is selected.
+03:09:21 INFO  : 'stop' command is executed.
+03:09:21 INFO  : 'ps7_init' command is executed.
+03:09:21 INFO  : 'ps7_post_config' command is executed.
+03:09:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:09:21 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:09:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:09:21 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:09:21 INFO  : 'configparams force-mem-access 0' command is executed.
+03:09:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:09:21 INFO  : Memory regions updated for context APU
+03:09:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:09:22 INFO  : 'con' command is executed.
+03:09:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+03:09:22 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'
+03:09:30 INFO  : Disconnected from the channel tcfchan#2.
+03:09:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02024" && level==0} -index 1' command is executed.
+03:09:31 INFO  : 'fpga -state' command is executed.
+03:09:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+03:09:32 INFO  : Jtag cable 'Digilent Zed 210248B02024' is selected.
+03:09:32 INFO  : 'jtag frequency' command is executed.
+03:09:32 INFO  : Sourcing of 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl' is done.
+03:09:32 INFO  : Context for 'APU' is selected.
+03:09:32 INFO  : Hardware design information is loaded from 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf'.
+03:09:32 INFO  : 'configparams force-mem-access 1' command is executed.
+03:09:32 INFO  : Context for 'APU' is selected.
+03:09:32 INFO  : 'stop' command is executed.
+03:09:32 INFO  : 'ps7_init' command is executed.
+03:09:32 INFO  : 'ps7_post_config' command is executed.
+03:09:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:09:32 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+03:09:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:09:33 INFO  : The application 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+03:09:33 INFO  : 'configparams force-mem-access 0' command is executed.
+03:09:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+loadhw -hw C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/system_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+dow C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.sdk/app_test/Debug/app_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+03:09:33 INFO  : Memory regions updated for context APU
+03:09:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+03:09:33 INFO  : 'con' command is executed.
+03:09:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248B02024"} -index 0
+con
+----------------End of Script----------------
+
+03:09:33 INFO  : Launch script is exported to file 'C:\Users\Viktor\Desktop\study\verilog_shit\magSem3_FPGA\project\ZedBoard\ZedBoard.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_app_test.elf_on_local.tcl'

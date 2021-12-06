@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Sun Nov 21 08:33:00 2021
+| Date         : Mon Dec  6 02:57:52 2021
 | Host         : DESKTOP-3GDJ0OK running 64-bit major release  (build 9200)
 | Command      : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
 | Design       : system_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   43 |     0 |       200 | 21.50 |
+| Bonded IOB                  |   39 |     0 |       200 | 19.50 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -146,43 +146,42 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |   22 |                  IO |
-| IBUF     |   21 |                  IO |
-| OBUFT    |    8 |                  IO |
+| IBUF     |   20 |                  IO |
+| OBUF     |   19 |                  IO |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+-------------------------------+------+
-|            Ref Name           | Used |
-+-------------------------------+------+
-| system_xbar_0                 |    1 |
-| system_system_ila_0_0         |    1 |
-| system_s00_mmu_0              |    1 |
-| system_rst_ps7_0_100M_0       |    1 |
-| system_processing_system7_0_0 |    1 |
-| system_axi_gpio_1_0           |    1 |
-| system_axi_gpio_0_0           |    1 |
-| system_auto_us_0              |    1 |
-| system_auto_pc_7              |    1 |
-| system_auto_pc_6              |    1 |
-| system_auto_pc_5              |    1 |
-| system_auto_pc_4              |    1 |
-| system_auto_pc_3              |    1 |
-| system_auto_pc_2              |    1 |
-| system_auto_pc_1              |    1 |
-| system_auto_pc_0              |    1 |
-| system_auto_ds_5              |    1 |
-| system_auto_ds_4              |    1 |
-| system_auto_ds_3              |    1 |
-| system_auto_ds_2              |    1 |
-| system_auto_ds_1              |    1 |
-| system_auto_ds_0              |    1 |
-| system_VGA_0_0                |    1 |
-| system_PmodMTDS_0_0           |    1 |
-+-------------------------------+------+
++---------------------------------+------+
+|             Ref Name            | Used |
++---------------------------------+------+
+| system_xlconstant_1_0           |    1 |
+| system_xlconstant_0_0           |    1 |
+| system_xbar_0                   |    1 |
+| system_system_ila_0_0           |    1 |
+| system_rst_ps7_0_100M_0         |    1 |
+| system_processing_system7_0_0   |    1 |
+| system_ov7670_decode_stream_0_1 |    1 |
+| system_ov7670_debounce_0_1      |    1 |
+| system_ov7670_controller_0_2    |    1 |
+| system_fifo_generator_0_1       |    1 |
+| system_axi_vdma_0_0             |    1 |
+| system_axi_gpio_0_0             |    1 |
+| system_auto_us_0                |    1 |
+| system_auto_pc_5                |    1 |
+| system_auto_pc_4                |    1 |
+| system_auto_pc_3                |    1 |
+| system_auto_pc_2                |    1 |
+| system_auto_pc_1                |    1 |
+| system_auto_pc_0                |    1 |
+| system_auto_ds_3                |    1 |
+| system_auto_ds_2                |    1 |
+| system_auto_ds_1                |    1 |
+| system_auto_ds_0                |    1 |
+| system_VGA_0_0                  |    1 |
++---------------------------------+------+
 
 
 9. Instantiated Netlists

@@ -1,0 +1,27 @@
+#include <VGA.h>
+
+#include <mtds.h>
+#include <MyDisp.h>
+#include <stdint.h>
+#include <string.h>
+#include "sleep.h"
+#include "xil_cache.h"
+#include "xparameters.h"
+#include "xgpio.h"
+
+#include "xil_mmu.h"
+#include "xil_assert.h"
+
+#define VGA_MEMORY_ATTRIBUTE 		0x00010c06
+
+// frame for VGA SLAVE
+#define VGA_FRAME_ADDRESS 			0x00200000
+// frame for CPU SLAVE
+vga_frame our_vga_frame;
+vga our_vga;
+
+vga_pixel cur_color = {0,0,0};
+
+int main(){
+	return 0;
+}

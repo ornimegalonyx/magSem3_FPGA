@@ -72,8 +72,9 @@ set rc [catch {
   set_property webtalk.parent_dir C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/wt [current_project]
   set_property parent.project_path C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.xpr [current_project]
   set_property ip_repo_paths {
-  c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/vivado-library
+  C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/vivado-library
   C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/VGA_1.0-master
+  C:/Users/Viktor/Desktop/study/verilog_shit/ov7670_VDMA_VGA/ip_repo
 } [current_project]
   set_property ip_output_repo C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

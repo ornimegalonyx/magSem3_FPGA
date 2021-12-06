@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Sun Dec 05 20:17:22 UTC 2021
+VLNV: Aerotenna:user:ov7670_debounce:1.0
+SynthRuntime: 80

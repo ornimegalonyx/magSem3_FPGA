@@ -12,120 +12,122 @@ source system_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/vivado-library'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/VGA_1.0-master'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Viktor/Desktop/study/verilog_shit/ov7670_VDMA_VGA/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
-WARNING: [BD 41-1661] One or more IPs have been locked in the design 'system.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
-List of locked IPs:
-system_VGA_0_0
-
-add_files: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 444.887 ; gain = 123.805
+add_files: Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 443.508 ; gain = 121.430
 Command: synth_design -top system_wrapper -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22664 
+INFO: Helper process launched with PID 3924 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 551.578 ; gain = 104.977
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 549.691 ; gain = 104.453
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
-	Parameter DRIVE bound to: 12 - type: integer 
-	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
-	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [C:/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
-INFO: [Synth 8-6157] synthesizing module 'system' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4224]
-INFO: [Synth 8-6157] synthesizing module 'system_PmodMTDS_0_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_PmodMTDS_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_PmodMTDS_0_0' (2#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_PmodMTDS_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'PmodMTDS_0' of module 'system_PmodMTDS_0_0' requires 79 connections, but only 77 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4634]
-INFO: [Synth 8-6157] synthesizing module 'system_VGA_0_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_VGA_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_VGA_0_0' (3#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_VGA_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_0' (4#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_1_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_1_0' (5#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (6#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'system_processing_system7_0_0' requires 113 connections, but only 102 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4821]
-INFO: [Synth 8-6157] synthesizing module 'system_ps7_0_axi_periph_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:5207]
+INFO: [Synth 8-6157] synthesizing module 'system' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4122]
+INFO: [Synth 8-6157] synthesizing module 'system_VGA_0_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_VGA_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_VGA_0_0' (1#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_VGA_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_0' (2#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_axi_gpio_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_gpio_0' of module 'system_axi_gpio_0_0' requires 21 connections, but only 20 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4527]
+INFO: [Synth 8-6157] synthesizing module 'system_fifo_generator_0_1' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_fifo_generator_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_fifo_generator_0_1' (3#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_fifo_generator_0_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'fifo_generator_0' of module 'system_fifo_generator_0_1' requires 13 connections, but only 11 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4548]
+INFO: [Synth 8-6157] synthesizing module 'system_ov7670_controller_0_2' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_ov7670_controller_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ov7670_controller_0_2' (4#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_ov7670_controller_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_ov7670_debounce_0_1' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_ov7670_debounce_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ov7670_debounce_0_1' (5#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_ov7670_debounce_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_ov7670_decode_stream_0_1' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_ov7670_decode_stream_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ov7670_decode_stream_0_1' (6#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_ov7670_decode_stream_0_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'ov7670_decode_stream_0' of module 'system_ov7670_decode_stream_0_1' requires 30 connections, but only 29 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4571]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (7#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'system_processing_system7_0_0' requires 113 connections, but only 102 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4601]
+INFO: [Synth 8-6157] synthesizing module 'system_ps7_0_axi_periph_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:5038]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1H7AUOX' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:12]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_ds_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_ds_0' (7#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (8#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_ds_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_ds_0' (8#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (9#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'auto_pc' of module 'system_auto_pc_0' requires 56 connections, but only 54 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:343]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1H7AUOX' (9#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1H7AUOX' (10#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_4Y7TYO' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:400]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_ds_1' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_ds_1' (10#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_1' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_1' (11#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_1_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'system_auto_pc_1' requires 56 connections, but only 54 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:731]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_4Y7TYO' (12#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:400]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_FKL2TE' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:788]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_ds_2' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_ds_2' (13#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_2' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_2' (14#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_2_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'system_auto_pc_2' requires 56 connections, but only 54 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1119]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_FKL2TE' (15#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:788]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_15QZ4LV' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1176]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_ds_3' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_ds_3' (16#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_3_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_3' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_3' (17#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_3_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'system_auto_pc_3' requires 56 connections, but only 54 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1507]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_15QZ4LV' (18#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1176]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_TUCI1Y' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1564]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_ds_4' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_ds_4' (19#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_4' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_4' (20#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_4_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_pc' of module 'system_auto_pc_4' requires 56 connections, but only 54 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1895]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_TUCI1Y' (21#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1564]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1IWS6WN' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1952]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1IWS6WN' (22#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1952]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1TJ5H51' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2182]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_ds_5' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_ds_5' (23#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_ds_5_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_5' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_5' (24#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_5_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1TJ5H51' (25#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2182]
-INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_IE0TQS' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2580]
-INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_IE0TQS' (26#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2580]
-WARNING: [Synth 8-350] instance 'm07_couplers' of module 'm07_couplers_imp_IE0TQS' requires 74 connections, but only 70 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:7687]
-INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1KSFJCE' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2838]
-INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1KSFJCE' (27#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2838]
-WARNING: [Synth 8-350] instance 'm08_couplers' of module 'm08_couplers_imp_1KSFJCE' requires 74 connections, but only 70 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:7758]
-INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_REJNZZ' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3096]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_6' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_6' (28#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_6_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_REJNZZ' (29#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3096]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_11SE3QO' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3456]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_7' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_7_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_7' (30#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_pc_7_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_us_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_us_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_us_0' (31#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_auto_us_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'auto_us' of module 'system_auto_us_0' requires 76 connections, but only 74 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3874]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_11SE3QO' (32#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3456]
-INFO: [Synth 8-6157] synthesizing module 'system_s00_mmu_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_s00_mmu_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_s00_mmu_0' (33#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_s00_mmu_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_AN2PCX' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3951]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_AN2PCX' (34#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3951]
-INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (35#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_ps7_0_axi_periph_0' (36#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:5207]
-WARNING: [Synth 8-350] instance 'ps7_0_axi_periph' of module 'system_ps7_0_axi_periph_0' requires 331 connections, but only 265 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4924]
-INFO: [Synth 8-6157] synthesizing module 'system_rst_ps7_0_100M_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_rst_ps7_0_100M_0' (37#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'system_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:5190]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:5198]
-INFO: [Synth 8-6157] synthesizing module 'system_system_ila_0_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_system_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_system_ila_0_0' (38#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-19216-DESKTOP-3GDJ0OK/realtime/system_system_ila_0_0_stub.v:6]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'VGA_0'. This will prevent further optimization [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4712]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'system_ila_0'. This will prevent further optimization [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:5198]
-INFO: [Synth 8-6155] done synthesizing module 'system' (39#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4224]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_4Y7TYO' (11#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:400]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_FKL2TE' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:658]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_FKL2TE' (12#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:658]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_15QZ4LV' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:916]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_15QZ4LV' (13#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:916]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_TUCI1Y' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1174]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_TUCI1Y' (14#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1174]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1IWS6WN' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1432]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_ds_1' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_ds_1' (15#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_1' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_1' (16#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1IWS6WN' (17#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1432]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1TJ5H51' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1830]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_ds_2' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_ds_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_ds_2' (18#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_ds_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_2' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_2' (19#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1TJ5H51' (20#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1830]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_IE0TQS' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2228]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_ds_3' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_ds_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_ds_3' (21#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_ds_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_3' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_3' (22#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_3_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_pc' of module 'system_auto_pc_3' requires 56 connections, but only 53 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2555]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_IE0TQS' (23#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2228]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1KSFJCE' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2611]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1KSFJCE' (24#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2611]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_REJNZZ' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2869]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_4' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_4' (25#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_REJNZZ' (26#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2869]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_11SE3QO' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3229]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_5' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_5' (27#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_pc_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_us_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_us_0' (28#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_auto_us_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'auto_us' of module 'system_auto_us_0' requires 76 connections, but only 74 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3647]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_11SE3QO' (29#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3229]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_AN2PCX' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3724]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_AN2PCX' (30#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3724]
+INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_4BIA6R' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3996]
+INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_4BIA6R' (31#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3996]
+INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (32#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_arready' does not match port width (3) of module 'system_xbar_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:7988]
+WARNING: [Synth 8-689] width (6) of port connection 's_axi_bid' does not match port width (9) of module 'system_xbar_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:8002]
+WARNING: [Synth 8-689] width (128) of port connection 's_axi_rdata' does not match port width (192) of module 'system_xbar_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:8006]
+WARNING: [Synth 8-689] width (6) of port connection 's_axi_rid' does not match port width (9) of module 'system_xbar_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:8007]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_rlast' does not match port width (3) of module 'system_xbar_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:8008]
+WARNING: [Synth 8-689] width (4) of port connection 's_axi_rresp' does not match port width (6) of module 'system_xbar_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:8010]
+WARNING: [Synth 8-689] width (2) of port connection 's_axi_rvalid' does not match port width (3) of module 'system_xbar_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:8011]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps7_0_axi_periph_0' (33#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:5038]
+WARNING: [Synth 8-350] instance 'ps7_0_axi_periph' of module 'system_ps7_0_axi_periph_0' requires 398 connections, but only 268 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4704]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_ps7_0_100M_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_ps7_0_100M_0' (34#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'system_rst_ps7_0_100M_0' requires 10 connections, but only 7 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4973]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_vdma_0_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_axi_vdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_vdma_0_0' (35#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_axi_vdma_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 's2mm_vdma' of module 'system_axi_vdma_0_0' requires 45 connections, but only 43 given [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4981]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:5025]
+INFO: [Synth 8-6157] synthesizing module 'system_system_ila_0_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_system_ila_0_0' (36#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_0_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_xlconstant_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_0' (37#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_xlconstant_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_1_0' [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_xlconstant_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_1_0' (38#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-28532-DESKTOP-3GDJ0OK/realtime/system_xlconstant_1_0_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'VGA_0'. This will prevent further optimization [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4463]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'system_ila_0'. This will prevent further optimization [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:5025]
+INFO: [Synth 8-6155] done synthesizing module 'system' (39#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:4122]
 INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (40#1) [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+WARNING: [Synth 8-3331] design s02_couplers_imp_4BIA6R has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s02_couplers_imp_4BIA6R has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s02_couplers_imp_4BIA6R has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design s02_couplers_imp_4BIA6R has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design s01_couplers_imp_AN2PCX has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s01_couplers_imp_AN2PCX has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design s01_couplers_imp_AN2PCX has unconnected port S_ACLK
@@ -140,95 +142,30 @@ WARNING: [Synth 8-3331] design m08_couplers_imp_1KSFJCE has unconnected port S_A
 WARNING: [Synth 8-3331] design m08_couplers_imp_1KSFJCE has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m07_couplers_imp_IE0TQS has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m07_couplers_imp_IE0TQS has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m07_couplers_imp_IE0TQS has unconnected port S_ACLK
-WARNING: [Synth 8-3331] design m07_couplers_imp_IE0TQS has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m06_couplers_imp_1TJ5H51 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m06_couplers_imp_1TJ5H51 has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m05_couplers_imp_1IWS6WN has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m05_couplers_imp_1IWS6WN has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m05_couplers_imp_1IWS6WN has unconnected port S_ACLK
-WARNING: [Synth 8-3331] design m05_couplers_imp_1IWS6WN has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m04_couplers_imp_TUCI1Y has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m04_couplers_imp_TUCI1Y has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_TUCI1Y has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_TUCI1Y has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m03_couplers_imp_15QZ4LV has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m03_couplers_imp_15QZ4LV has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_15QZ4LV has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_15QZ4LV has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m02_couplers_imp_FKL2TE has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m02_couplers_imp_FKL2TE has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_FKL2TE has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_FKL2TE has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m01_couplers_imp_4Y7TYO has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m01_couplers_imp_4Y7TYO has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_4Y7TYO has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_4Y7TYO has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m00_couplers_imp_1H7AUOX has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_1H7AUOX has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_bresp[1]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[31]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[30]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[29]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[28]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[27]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[26]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[25]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[24]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[23]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[22]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[21]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[20]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[19]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[18]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[17]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[16]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[15]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[14]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[13]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[12]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[11]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[10]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[9]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[8]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[7]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[6]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[5]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[4]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[3]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[2]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rdata[1]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_AXI_rresp[1]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_bresp[1]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[31]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[30]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[29]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[28]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[27]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[26]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[25]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[24]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[23]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[22]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[21]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[20]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[19]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[18]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[17]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[16]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[15]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[14]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[13]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[12]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[11]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[10]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[9]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[8]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[7]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[6]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[5]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[4]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[3]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[2]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rdata[1]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_AXI_rresp[1]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M08_AXI_bresp[1]
-WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M08_AXI_rdata[31]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 610.445 ; gain = 163.844
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 606.996 ; gain = 161.758
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -241,13 +178,11 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 610.445 ; gain = 163.844
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 606.996 ; gain = 161.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 610.445 ; gain = 163.844
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 606.996 ; gain = 161.758
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -257,10 +192,6 @@ Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/projec
 Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0/system_processing_system7_0_0_in_context.xdc] for cell 'system_i/processing_system7_0'
 Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0/system_axi_gpio_0_0_in_context.xdc] for cell 'system_i/axi_gpio_0'
 Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0/system_axi_gpio_0_0_in_context.xdc] for cell 'system_i/axi_gpio_0'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0/system_axi_gpio_1_0_in_context.xdc] for cell 'system_i/axi_gpio_1'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0/system_axi_gpio_1_0_in_context.xdc] for cell 'system_i/axi_gpio_1'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_PmodMTDS_0_0/system_PmodMTDS_0_0/system_PmodMTDS_0_0_in_context.xdc] for cell 'system_i/PmodMTDS_0'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_PmodMTDS_0_0/system_PmodMTDS_0_0/system_PmodMTDS_0_0_in_context.xdc] for cell 'system_i/PmodMTDS_0'
 Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_in_context.xdc] for cell 'system_i/rst_ps7_0_100M'
 Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_in_context.xdc] for cell 'system_i/rst_ps7_0_100M'
 Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0/system_xbar_0_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/xbar'
@@ -269,44 +200,64 @@ Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/projec
 Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_VGA_0_0/system_VGA_0_0/system_VGA_0_0_in_context.xdc] for cell 'system_i/VGA_0'
 Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_system_ila_0_0/system_system_ila_0_0/system_system_ila_0_0_in_context.xdc] for cell 'system_i/system_ila_0'
 Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_system_ila_0_0/system_system_ila_0_0/system_system_ila_0_0_in_context.xdc] for cell 'system_i/system_ila_0'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_s00_mmu_0/system_s00_mmu_0/system_s00_mmu_0_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_mmu'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_s00_mmu_0/system_s00_mmu_0/system_s00_mmu_0_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_mmu'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_6/system_auto_pc_6/system_auto_pc_6_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m09_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_6/system_auto_pc_6/system_auto_pc_6_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m09_couplers/auto_pc'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_5/system_auto_ds_5/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m06_couplers/auto_ds'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_5/system_auto_ds_5/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m06_couplers/auto_ds'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_5/system_auto_pc_5/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m06_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_5/system_auto_pc_5/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m06_couplers/auto_pc'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_4/system_auto_ds_4/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m04_couplers/auto_ds'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_4/system_auto_ds_4/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m04_couplers/auto_ds'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_4/system_auto_pc_4/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m04_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_4/system_auto_pc_4/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m04_couplers/auto_pc'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_3/system_auto_ds_3/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m03_couplers/auto_ds'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_3/system_auto_ds_3/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m03_couplers/auto_ds'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_3/system_auto_pc_3/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m03_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_3/system_auto_pc_3/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m03_couplers/auto_pc'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_2/system_auto_ds_2/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m02_couplers/auto_ds'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_2/system_auto_ds_2/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m02_couplers/auto_ds'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m02_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m02_couplers/auto_pc'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_1/system_auto_ds_1/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m01_couplers/auto_ds'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_1/system_auto_ds_1/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m01_couplers/auto_ds'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m01_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m01_couplers/auto_pc'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_ov7670_controller_0_2/system_ov7670_controller_0_2/system_ov7670_controller_0_2_in_context.xdc] for cell 'system_i/ov7670_controller_0'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_ov7670_controller_0_2/system_ov7670_controller_0_2/system_ov7670_controller_0_2_in_context.xdc] for cell 'system_i/ov7670_controller_0'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_ov7670_debounce_0_1/system_ov7670_debounce_0_1/system_ov7670_debounce_0_1_in_context.xdc] for cell 'system_i/ov7670_debounce_0'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_ov7670_debounce_0_1/system_ov7670_debounce_0_1/system_ov7670_debounce_0_1_in_context.xdc] for cell 'system_i/ov7670_debounce_0'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_ov7670_decode_stream_0_1/system_ov7670_decode_stream_0_1/system_ov7670_decode_stream_0_1_in_context.xdc] for cell 'system_i/ov7670_decode_stream_0'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_ov7670_decode_stream_0_1/system_ov7670_decode_stream_0_1/system_ov7670_decode_stream_0_1_in_context.xdc] for cell 'system_i/ov7670_decode_stream_0'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_fifo_generator_0_1/system_fifo_generator_0_1/system_fifo_generator_0_1_in_context.xdc] for cell 'system_i/fifo_generator_0'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_fifo_generator_0_1/system_fifo_generator_0_1/system_fifo_generator_0_1_in_context.xdc] for cell 'system_i/fifo_generator_0'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0/system_axi_vdma_0_0_in_context.xdc] for cell 'system_i/s2mm_vdma'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0/system_axi_vdma_0_0_in_context.xdc] for cell 'system_i/s2mm_vdma'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_xlconstant_0_0/system_xlconstant_0_0/system_xlconstant_0_0_in_context.xdc] for cell 'system_i/xlconstant_0'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_xlconstant_0_0/system_xlconstant_0_0/system_xlconstant_0_0_in_context.xdc] for cell 'system_i/xlconstant_0'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_xlconstant_1_0/system_xlconstant_1_0/system_xlconstant_1_0_in_context.xdc] for cell 'system_i/xlconstant_1'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_xlconstant_1_0/system_xlconstant_1_0/system_xlconstant_1_0_in_context.xdc] for cell 'system_i/xlconstant_1'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_4/system_auto_pc_4/system_auto_pc_6_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m09_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_4/system_auto_pc_4/system_auto_pc_6_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m09_couplers/auto_pc'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_3/system_auto_ds_3/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m07_couplers/auto_ds'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_3/system_auto_ds_3/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m07_couplers/auto_ds'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_3/system_auto_pc_3/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m07_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_3/system_auto_pc_3/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m07_couplers/auto_pc'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_2/system_auto_ds_2/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m06_couplers/auto_ds'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_2/system_auto_ds_2/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m06_couplers/auto_ds'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m06_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m06_couplers/auto_pc'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_1/system_auto_ds_1/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m05_couplers/auto_ds'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_1/system_auto_ds_1/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m05_couplers/auto_ds'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m05_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m05_couplers/auto_pc'
 Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_0/system_auto_ds_0/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m00_couplers/auto_ds'
 Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_ds_0/system_auto_ds_0/system_auto_ds_2_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m00_couplers/auto_ds'
 Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m00_couplers/auto_pc'
 Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_1_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/m00_couplers/auto_pc'
-Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_7/system_auto_pc_7/system_auto_pc_6_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_7/system_auto_pc_7/system_auto_pc_6_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_5/system_auto_pc_5/system_auto_pc_6_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_5/system_auto_pc_5/system_auto_pc_6_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0/system_auto_us_0_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_us'
 Finished Parsing XDC File [c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0/system_auto_us_0_in_context.xdc] for cell 'system_i/ps7_0_axi_periph/s00_couplers/auto_us'
 Parsing XDC File [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc]
-WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 33]]'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:362]
-WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:367]
-WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 35]]'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:372]
-WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 13]]'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:375]
+WARNING: [Vivado 12-584] No ports matched 'vga_hsync'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:241]
+WARNING: [Vivado 12-584] No ports matched 'vga_hsync'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:242]
+WARNING: [Vivado 12-584] No ports matched 'vga_vsync'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:244]
+WARNING: [Vivado 12-584] No ports matched 'vga_vsync'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:245]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:262]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:267]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:272]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:277]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:282]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:287]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:293]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:298]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:308]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:312]
+WARNING: [Vivado 12-4702] SLEW is not a supported property on input port(s). Setting is ignored. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:316]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 33]]'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:498]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 34]]'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:503]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 35]]'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:508]
+WARNING: [Vivado 12-584] No ports matched '[get_ports -of_objects [get_iobanks 13]]'. [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc:511]
 Finished Parsing XDC File [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/system_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/dont_touch.xdc]
@@ -314,19 +265,18 @@ Finished Parsing XDC File [C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FP
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 8 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 969.152 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 948.324 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 948.324 ; gain = 503.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 948.324 ; gain = 503.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -594,34 +544,34 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint
 Applied set_property DONT_TOUCH = true for system_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/processing_system7_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/PmodMTDS_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/VGA_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/system_ila_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/s00_mmu. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ov7670_controller_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ov7670_debounce_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ov7670_decode_stream_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/fifo_generator_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/s2mm_vdma. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/xlconstant_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m09_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m07_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m07_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m06_couplers/auto_ds. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m06_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m04_couplers/auto_ds. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m04_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m03_couplers/auto_ds. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m03_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m02_couplers/auto_ds. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m02_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m01_couplers/auto_ds. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m05_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m05_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m00_couplers/auto_ds. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/ps7_0_axi_periph/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 948.324 ; gain = 503.086
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 948.324 ; gain = 503.086
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -656,8 +606,32 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M04_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M04_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M05_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M06_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M06_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M07_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M08_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M08_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M09_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port M09_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port S01_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port S01_ARESETN
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port S02_ACLK
+WARNING: [Synth 8-3331] design system_ps7_0_axi_periph_0 has unconnected port S02_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 948.324 ; gain = 503.086
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -671,13 +645,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/processing_system7_0/FCLK_CLK0' to pin 'system_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 960.883 ; gain = 515.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 961.477 ; gain = 516.238
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -689,7 +663,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:45 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 966.648 ; gain = 521.410
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -713,7 +687,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 966.660 ; gain = 521.422
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -726,7 +700,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 966.660 ; gain = 521.422
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -738,130 +712,126 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 966.660 ; gain = 521.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 966.660 ; gain = 521.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 966.660 ; gain = 521.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 966.660 ; gain = 521.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+------------------------------+----------+
-|      |BlackBox name                 |Instances |
-+------+------------------------------+----------+
-|1     |system_s00_mmu_0              |         1|
-|2     |system_xbar_0                 |         1|
-|3     |system_auto_ds_0              |         1|
-|4     |system_auto_pc_0              |         1|
-|5     |system_auto_ds_1              |         1|
-|6     |system_auto_pc_1              |         1|
-|7     |system_auto_ds_2              |         1|
-|8     |system_auto_pc_2              |         1|
-|9     |system_auto_ds_3              |         1|
-|10    |system_auto_pc_3              |         1|
-|11    |system_auto_ds_4              |         1|
-|12    |system_auto_pc_4              |         1|
-|13    |system_auto_ds_5              |         1|
-|14    |system_auto_pc_5              |         1|
-|15    |system_auto_pc_6              |         1|
-|16    |system_auto_pc_7              |         1|
-|17    |system_auto_us_0              |         1|
-|18    |system_PmodMTDS_0_0           |         1|
-|19    |system_VGA_0_0                |         1|
-|20    |system_axi_gpio_0_0           |         1|
-|21    |system_axi_gpio_1_0           |         1|
-|22    |system_processing_system7_0_0 |         1|
-|23    |system_rst_ps7_0_100M_0       |         1|
-|24    |system_system_ila_0_0         |         1|
-+------+------------------------------+----------+
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |system_xbar_0                   |         1|
+|2     |system_auto_ds_0                |         1|
+|3     |system_auto_pc_0                |         1|
+|4     |system_auto_ds_1                |         1|
+|5     |system_auto_pc_1                |         1|
+|6     |system_auto_ds_2                |         1|
+|7     |system_auto_pc_2                |         1|
+|8     |system_auto_ds_3                |         1|
+|9     |system_auto_pc_3                |         1|
+|10    |system_auto_pc_4                |         1|
+|11    |system_auto_pc_5                |         1|
+|12    |system_auto_us_0                |         1|
+|13    |system_VGA_0_0                  |         1|
+|14    |system_axi_gpio_0_0             |         1|
+|15    |system_fifo_generator_0_1       |         1|
+|16    |system_ov7670_controller_0_2    |         1|
+|17    |system_ov7670_debounce_0_1      |         1|
+|18    |system_ov7670_decode_stream_0_1 |         1|
+|19    |system_processing_system7_0_0   |         1|
+|20    |system_rst_ps7_0_100M_0         |         1|
+|21    |system_axi_vdma_0_0             |         1|
+|22    |system_system_ila_0_0           |         1|
+|23    |system_xlconstant_0_0           |         1|
+|24    |system_xlconstant_1_0           |         1|
++------+--------------------------------+----------+
 
 Report Cell Usage: 
-+------+------------------------------+------+
-|      |Cell                          |Count |
-+------+------------------------------+------+
-|1     |system_PmodMTDS_0_0           |     1|
-|2     |system_VGA_0_0                |     1|
-|3     |system_auto_ds_0              |     1|
-|4     |system_auto_ds_1              |     1|
-|5     |system_auto_ds_2              |     1|
-|6     |system_auto_ds_3              |     1|
-|7     |system_auto_ds_4              |     1|
-|8     |system_auto_ds_5              |     1|
-|9     |system_auto_pc_0              |     1|
-|10    |system_auto_pc_1              |     1|
-|11    |system_auto_pc_2              |     1|
-|12    |system_auto_pc_3              |     1|
-|13    |system_auto_pc_4              |     1|
-|14    |system_auto_pc_5              |     1|
-|15    |system_auto_pc_6              |     1|
-|16    |system_auto_pc_7              |     1|
-|17    |system_auto_us_0              |     1|
-|18    |system_axi_gpio_0_0           |     1|
-|19    |system_axi_gpio_1_0           |     1|
-|20    |system_processing_system7_0_0 |     1|
-|21    |system_rst_ps7_0_100M_0       |     1|
-|22    |system_s00_mmu_0              |     1|
-|23    |system_system_ila_0_0         |     1|
-|24    |system_xbar_0                 |     1|
-|25    |IBUF                          |    13|
-|26    |IOBUF                         |     8|
-|27    |OBUF                          |    22|
-+------+------------------------------+------+
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |system_VGA_0_0                  |     1|
+|2     |system_auto_ds_0                |     1|
+|3     |system_auto_ds_1                |     1|
+|4     |system_auto_ds_2                |     1|
+|5     |system_auto_ds_3                |     1|
+|6     |system_auto_pc_0                |     1|
+|7     |system_auto_pc_1                |     1|
+|8     |system_auto_pc_2                |     1|
+|9     |system_auto_pc_3                |     1|
+|10    |system_auto_pc_4                |     1|
+|11    |system_auto_pc_5                |     1|
+|12    |system_auto_us_0                |     1|
+|13    |system_axi_gpio_0_0             |     1|
+|14    |system_axi_vdma_0_0             |     1|
+|15    |system_fifo_generator_0_1       |     1|
+|16    |system_ov7670_controller_0_2    |     1|
+|17    |system_ov7670_debounce_0_1      |     1|
+|18    |system_ov7670_decode_stream_0_1 |     1|
+|19    |system_processing_system7_0_0   |     1|
+|20    |system_rst_ps7_0_100M_0         |     1|
+|21    |system_system_ila_0_0           |     1|
+|22    |system_xbar_0                   |     1|
+|23    |system_xlconstant_0_0           |     1|
+|24    |system_xlconstant_1_0           |     1|
+|25    |IBUF                            |    20|
+|26    |OBUF                            |    19|
++------+--------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+--------------------------+------+
 |      |Instance             |Module                    |Cells |
 +------+---------------------+--------------------------+------+
-|1     |top                  |                          |  6367|
-|2     |  system_i           |system                    |  6324|
-|3     |    ps7_0_axi_periph |system_ps7_0_axi_periph_0 |  5534|
+|1     |top                  |                          |  5498|
+|2     |  system_i           |system                    |  5459|
+|3     |    ps7_0_axi_periph |system_ps7_0_axi_periph_0 |  4584|
 |4     |      m00_couplers   |m00_couplers_imp_1H7AUOX  |   391|
-|5     |      m01_couplers   |m01_couplers_imp_4Y7TYO   |   391|
-|6     |      m02_couplers   |m02_couplers_imp_FKL2TE   |   391|
-|7     |      m03_couplers   |m03_couplers_imp_15QZ4LV  |   391|
-|8     |      m04_couplers   |m04_couplers_imp_TUCI1Y   |   391|
-|9     |      m06_couplers   |m06_couplers_imp_1TJ5H51  |   391|
-|10    |      m09_couplers   |m09_couplers_imp_REJNZZ   |   260|
-|11    |      s00_couplers   |s00_couplers_imp_11SE3QO  |   520|
+|5     |      m05_couplers   |m05_couplers_imp_1IWS6WN  |   391|
+|6     |      m06_couplers   |m06_couplers_imp_1TJ5H51  |   391|
+|7     |      m07_couplers   |m07_couplers_imp_IE0TQS   |   391|
+|8     |      m09_couplers   |m09_couplers_imp_REJNZZ   |   260|
+|9     |      s00_couplers   |s00_couplers_imp_11SE3QO  |   520|
 +------+---------------------+--------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 969.152 ; gain = 522.551
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 966.660 ; gain = 521.422
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 121 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 969.152 ; gain = 163.844
-Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:47 . Memory (MB): peak = 969.152 ; gain = 522.551
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 966.660 ; gain = 180.094
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:38 . Memory (MB): peak = 966.660 ; gain = 521.422
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 8 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 8 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-103 Infos, 118 Warnings, 0 Critical Warnings and 0 Errors encountered.
+101 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:51 . Memory (MB): peak = 982.848 ; gain = 537.961
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 991.523 ; gain = 548.016
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/system_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 983.199 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 21 08:33:00 2021...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 991.785 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Dec  6 02:57:52 2021...

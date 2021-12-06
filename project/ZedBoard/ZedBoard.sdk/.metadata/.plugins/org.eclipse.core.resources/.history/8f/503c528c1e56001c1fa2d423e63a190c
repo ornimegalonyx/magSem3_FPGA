@@ -1,0 +1,64 @@
+#include <VGA.h>
+
+#include <mtds.h>
+#include <MyDisp.h>
+#include <stdint.h>
+#include <string.h>
+#include "sleep.h"
+#include "xil_cache.h"
+#include "xparameters.h"
+#include "xgpio.h"
+
+#include "xil_mmu.h"
+#include "xil_assert.h"
+
+#define VGA_MEMORY_ATTRIBUTE 		0x00010c06
+
+// frame for VGA SLAVE
+#define VGA_FRAME_ADDRESS 			0x00200000
+// frame for CPU SLAVE
+vga_frame our_vga_frame;
+vga our_vga;
+
+vga_pixel cur_color = {0,0,0};
+
+void vga_setup(vga* vga_obj,uint32_t* config_address,vga_frame* vga_frame_obj) {
+	vga_obj->config_address = config_address;
+	vga_obj->vga_frame_obj = vga_frame_obj;
+	vga_frame_clear(vga_frame_obj);
+	vga_obj->config_address[VGA_ADDR_ADDRESS_REG] = (uint32_t)vga_frame_obj;
+	vga_set_start(vga_obj,1);
+}
+
+void setup() {
+	/* Configure frame buffer memory to device. */
+	Xil_SetTlbAttributes(VGA_FRAME_ADDRESS,VGA_MEMORY_ATTRIBUTE);
+
+	vga_setup(&our_vga, (uint32_t*)0x43C30000, (vga_frame*)VGA_FRAME_ADDRESS);
+	vga_frame_clear(&our_vga_frame);
+
+	XGpio_Initialize(&gpio0, 0);
+	XGpio_Initialize(&gpio1, 1);
+	XGpio_SetDataDirection(&gpio0, 1, 0xFFFFFFFF); // set SW GPIO channel tristates to All Input
+	XGpio_SetDataDirection(&gpio0, 2, 0x00000000); // set LED GPIO channel tristates to All Output
+	XGpio_SetDataDirection(&gpio1, 1, 0xFFFFFFFF); // set BTN GPIO channel tristates to All Input
+	while (true) {
+		if (mydisp.begin()) {
+			xil_printf("mydisp.begin() succeeded\n\r");
+			break;
+		}
+		else {
+			xil_printf("mydisp.begin() failed\n\r");
+			sleep(1);
+		}
+	}
+	mydisp.clearDisplay(curBackground);
+}
+
+int main(){
+	setup();
+	while (1) {
+
+	}
+	return 0;
+}

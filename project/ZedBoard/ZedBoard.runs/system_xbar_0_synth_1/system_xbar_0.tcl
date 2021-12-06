@@ -34,6 +34,7 @@ set_property board_part digilentinc.com:zedboard:part0:1.0 [current_project]
 set_property ip_repo_paths {
   c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/vivado-library
   c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/VGA_1.0-master
+  c:/Users/Viktor/Desktop/study/verilog_shit/ov7670_VDMA_VGA/ip_repo
 } [current_project]
 set_property ip_output_repo c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
