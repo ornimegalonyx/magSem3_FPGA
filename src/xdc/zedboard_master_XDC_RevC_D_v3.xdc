@@ -63,39 +63,6 @@
 #
 # ----------------------------------------------------------------------------
 
-
-# ----------------------------------------------------------------------------
-# IOSTANDARD Constraints
-#
-# Note that these IOSTANDARD constraints are applied to all IOs currently
-# assigned within an I/O bank.  If these IOSTANDARD constraints are 
-# evaluated prior to other PACKAGE_PIN constraints being applied, then 
-# the IOSTANDARD specified will likely not be applied properly to those 
-# pins.  Therefore, bank wide IOSTANDARD constraints should be placed 
-# within the XDC file in a location that is evaluated AFTER all 
-# PACKAGE_PIN constraints within the target bank have been evaluated.
-#
-# Un-comment one or more of the following IOSTANDARD constraints according to
-# the bank pin assignments that are required within a design.
-# ---------------------------------------------------------------------------- 
-
-# # Note that the bank voltage for IO Bank 33 is fixed to 3.3V on ZedBoard. 
- set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 33]];
-
-# # Set the bank voltage for IO Bank 34 to 1.8V by default.
-# set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 34]];
-# set_property IOSTANDARD LVCMOS25 [get_ports -of_objects [get_iobanks 34]];
- set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 34]];
-
-# # Set the bank voltage for IO Bank 35 to 1.8V by default.
-# set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 35]];
-# set_property IOSTANDARD LVCMOS25 [get_ports -of_objects [get_iobanks 35]];
- set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 35]];
-
-# # Note that the bank voltage for IO Bank 13 is fixed to 3.3V on ZedBoard. 
- set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]];
-
-
 # # ----------------------------------------------------------------------------
 # # Audio Codec - Bank 13
 # # ---------------------------------------------------------------------------- 
@@ -301,8 +268,8 @@ set_property SLEW SLOW [get_ports ov7670_vsync]
 
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets ov7670_pclk]
 
-set_property PACKAGE_PIN T22 [get_ports config_finished] # "LD0"
-set_property IOSTANDARD LVTTL [get_ports config_finished]
+set_property PACKAGE_PIN T22 [get_ports config_finished]; # "LD0"
+set_property IOSTANDARD LVTTL [get_ports config_finished];
 
 #iic_0_sda_io
 #ov7670_siod
@@ -460,3 +427,34 @@ set_property SLEW SLOW [get_ports ov7670_sioc]
 # set_property PACKAGE_PIN A21 [get_ports {FMC_LA32_P}];  # "FMC-LA32_P"
 # set_property PACKAGE_PIN B22 [get_ports {FMC_LA33_N}];  # "FMC-LA33_N"
 # set_property PACKAGE_PIN B21 [get_ports {FMC_LA33_P}];  # "FMC-LA33_P"
+
+# ----------------------------------------------------------------------------
+# IOSTANDARD Constraints
+#
+# Note that these IOSTANDARD constraints are applied to all IOs currently
+# assigned within an I/O bank.  If these IOSTANDARD constraints are 
+# evaluated prior to other PACKAGE_PIN constraints being applied, then 
+# the IOSTANDARD specified will likely not be applied properly to those 
+# pins.  Therefore, bank wide IOSTANDARD constraints should be placed 
+# within the XDC file in a location that is evaluated AFTER all 
+# PACKAGE_PIN constraints within the target bank have been evaluated.
+#
+# Un-comment one or more of the following IOSTANDARD constraints according to
+# the bank pin assignments that are required within a design.
+# ---------------------------------------------------------------------------- 
+
+# Note that the bank voltage for IO Bank 33 is fixed to 3.3V on ZedBoard. 
+ set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 33]];
+
+# # Set the bank voltage for IO Bank 34 to 1.8V by default.
+# set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 34]];
+# set_property IOSTANDARD LVCMOS25 [get_ports -of_objects [get_iobanks 34]];
+# set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 34]];
+
+# Set the bank voltage for IO Bank 35 to 1.8V by default.
+# set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 35]];
+# set_property IOSTANDARD LVCMOS25 [get_ports -of_objects [get_iobanks 35]];
+ set_property IOSTANDARD LVCMOS18 [get_ports -of_objects [get_iobanks 35]];
+
+# Note that the bank voltage for IO Bank 13 is fixed to 3.3V on ZedBoard. 
+ set_property IOSTANDARD LVCMOS33 [get_ports -of_objects [get_iobanks 13]];
