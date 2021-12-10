@@ -1,10 +1,9 @@
 /*
  * main.cc
  *
- *  Created on: 6 дек. 2021 г.
+ *  Created on: 6 пїЅпїЅпїЅ. 2021 пїЅ.
  *      Author: Viktor
  */
-
 
 #include <VGA.h>
 
@@ -24,60 +23,84 @@
 
 #define DEBUG
 
-#define VGA_MEMORY_ATTRIBUTE 		0x00010c06
+//#define VGA_MEMORY_ATTRIBUTE 0x00010c06
 
 // frame for VGA SLAVE
-#define VGA_FRAME_ADDRESS 			0x10000000
+#define VGA_FRAME1_ADDRESS 0x10000000
+#define VGA_FRAME2_ADDRESS 0x10100000
+#define VGA_FRAME3_ADDRESS 0x10200000
 // frame for CPU SLAVE
-vga_frame our_vga_frame;
-vga our_vga;
+// vga_frame our_vga_frame;
+// vga our_vga;
 
-#define OV7670_STREAM							0x40000000
-#define VDMA_MM2S								0x43010000
-#define VDMA_S2MM								0x43010000
+//#define OV7670_STREAM 0x40000000
 
-#define HEIGHT                                  480
-#define WIDTH                                   640
+#define VDMA_MM2S 0x43000000
+#define VDMA_S2MM 0x43010000
 
-vga_pixel cur_color = { 0, 0, 0 };
+#define WIDTH 640
+#define HEIGHT 480
+#define CAM_BPP 2
 
-void vga_setup(vga* vga_obj, uint32_t* config_address,
-		vga_frame* vga_frame_obj) {
-	vga_obj->config_address = config_address;
-	vga_obj->vga_frame_obj = vga_frame_obj;
-	vga_frame_clear(vga_frame_obj);
-	vga_obj->config_address[VGA_ADDR_ADDRESS_REG] = (uint32_t) vga_frame_obj;
-	vga_set_start(vga_obj, 1);
-}
+vga_pixel cur_color = {0, 0, 0};
 
-void setup() {
+// void vga_setup(vga *vga_obj, uint32_t *config_address,
+//                vga_frame *vga_frame_obj)
+// {
+//     vga_obj->config_address = config_address;
+//     vga_obj->vga_frame_obj = vga_frame_obj;
+//     vga_frame_clear(vga_frame_obj);
+//     vga_obj->config_address[VGA_ADDR_ADDRESS_REG] = (uint32_t)vga_frame_obj;
+//     vga_set_start(vga_obj, 1);
+// }
+
+vdma_handle handle_s2mm;
+vdma_handle handle_mm2s;
+
+void setup()
+{
 	/* Configure frame buffer memory to device. */
-	Xil_SetTlbAttributes(VGA_FRAME_ADDRESS, VGA_MEMORY_ATTRIBUTE);
+	//Xil_SetTlbAttributes(VGA_FRAME_ADDRESS, VGA_MEMORY_ATTRIBUTE);
 
-	vga_setup(&our_vga, (uint32_t*) 0x43C30000, (vga_frame*) VGA_FRAME_ADDRESS);
-	vga_frame_clear(&our_vga_frame);
+	// vga_setup(&our_vga, (uint32_t *)0x43C30000, (vga_frame *)VGA_FRAME_ADDRESS);
+	// vga_frame_clear(&our_vga_frame);
 
-    vdma_handle handle_s2mm;
-//    vdma_handle handle_mm2s;
+	// Setup VDMA handle and memory-mapped ranges
+	vdma_setup(&handle_s2mm, VDMA_S2MM, WIDTH, HEIGHT, CAM_BPP,
+			   VGA_FRAME1_ADDRESS,
+			   0, 0);
+	vdma_setup(&handle_mm2s, VDMA_MM2S, WIDTH, HEIGHT, CAM_BPP,
+			   VGA_FRAME3_ADDRESS,
+			   0, 0);
 
-    // Setup VDMA handle and memory-mapped ranges
-    vdma_setup(&handle_s2mm, VDMA_S2MM, WIDTH, HEIGHT, 2, 0x10000000);
-//    vdma_setup(&handle_mm2s, VDMA_MM2S, WIDTH, HEIGHT, 2, 0x10000000);
+	// Start triple buffering
+	vdma_start_s2mm(&handle_s2mm);
+	vdma_start_mm2s(&handle_mm2s);
 
-    // Start triple buffering
-    vdma_start_s2mm(&handle_s2mm);
-//    vdma_start_mm2s(&handle_mm2s);
-
-    Xil_Out32(OV7670_STREAM, 1);
-
+	//Xil_Out32(OV7670_STREAM, 1);
 }
 
-int main() {
+// VGA_FRAME1_ADDRESS - here we stream from camera
+// VGA_FRAME2_ADDRESS/VGA_FRAME3_ADDRESS - here we changing frame			v
+// VGA_FRAME3_ADDRESS/VGA_FRAME2_ADDRESS - from here we stream to VGA		^
+
+int main()
+{
 	setup();
 
-	while (1) {
+	while (1)
+	{
+		// wait for frame from camera done
+		// TODO: wait
+
+		// cpy frame1 to frame2
+		memcpy((void *)VGA_FRAME2_ADDRESS, (void *)VGA_FRAME1_ADDRESS, WIDTH * HEIGHT * CAM_BPP);
+
+		// change frame data
 		// TODO: handler
-		//vga_frame_draw(&our_vga_frame, &our_vga);
+
+		// cpy frame2 to frame3
+		memcpy((void *)VGA_FRAME3_ADDRESS, (void *)VGA_FRAME3_ADDRESS, WIDTH * HEIGHT * CAM_BPP);
 	}
 
 	return 0;
