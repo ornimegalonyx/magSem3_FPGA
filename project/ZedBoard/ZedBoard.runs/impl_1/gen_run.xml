@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1639146132">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1639860261">
   <File Type="BITSTR-BMM" Name="system_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="system_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="system_wrapper_timing_summary_init.rpt"/>
@@ -116,7 +116,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -127,11 +129,9 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="system_ov7670_controller_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_vdma_s2mm_1"/>
   <BlockFileSet Type="BlockSrcs" Name="system_clk_wiz_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="system_v_tc_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_ov7670_axi_stream_ca_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_xlconcat_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_smartconnect_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_rst_ps7_0_100M_0"/>
@@ -140,5 +140,6 @@
   <BlockFileSet Type="BlockSrcs" Name="system_xbar_1"/>
   <BlockFileSet Type="BlockSrcs" Name="system_mux_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="system_ila_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ov7670_axi_stream_ca_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ov7670_controller_1_0"/>
 </GenRun>

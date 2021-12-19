@@ -184,7 +184,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>CLK_DOMAIN</spirit:name>
-            <spirit:value>system_ov7670_controller_0_0_xclk</spirit:value>
+            <spirit:value>system_ov7670_controller_1_0_xclk</spirit:value>
             <spirit:vendorExtensions>
               <bd:configElementInfos>
                 <bd:configElementInfo bd:valueSource="default_prop"/>
@@ -711,6 +711,21 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>pwdn</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_pwdn_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>reset</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_reset_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>ov7670_axi_stream_ca_0</spirit:instanceName>
         <spirit:componentRef spirit:library="module_ref" spirit:name="ov7670_axi_stream_capture" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
@@ -725,22 +740,7 @@
         <spirit:instanceName>ov7670_controller_0</spirit:instanceName>
         <spirit:componentRef spirit:library="user" spirit:name="ov7670_controller" spirit:vendor="user.org" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_ov7670_controller_0_0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>pwdn</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_pwdn_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="CONST_VAL">0</spirit:configurableElementValue>
-        </spirit:configurableElementValues>
-      </spirit:componentInstance>
-      <spirit:componentInstance>
-        <spirit:instanceName>reset</spirit:instanceName>
-        <spirit:componentRef spirit:library="ip" spirit:name="xlconstant" spirit:vendor="xilinx.com" spirit:version="1.1"/>
-        <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_reset_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">system_ov7670_controller_1_0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>
@@ -828,10 +828,10 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="S_AXI_HP0_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="M_AXI_GP0_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_vga_mm2s" spirit:portRef="m_axi_mm2s_aclk"/>
+        <spirit:internalPortReference spirit:componentRef="axi_vdma_vga_mm2s" spirit:portRef="s_axi_lite_aclk"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M01_ACLK"/>
-        <spirit:internalPortReference spirit:componentRef="axi_vdma_vga_mm2s" spirit:portRef="s_axi_lite_aclk"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ACLK"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -846,6 +846,7 @@
         <spirit:name>rst_clk25M175_peripheral_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="rst_clk25M175" spirit:portRef="peripheral_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="v_tc_0" spirit:portRef="resetn"/>
+        <spirit:internalPortReference spirit:componentRef="v_axi4s_vid_out_0" spirit:portRef="aresetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>mux_0_vga_r_o</spirit:name>
@@ -892,10 +893,10 @@
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_100M" spirit:portRef="peripheral_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="vdma_camera_s2mm" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="smartconnect_0" spirit:portRef="aresetn"/>
+        <spirit:internalPortReference spirit:componentRef="axi_vdma_vga_mm2s" spirit:portRef="axi_resetn"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="S00_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M01_ARESETN"/>
         <spirit:internalPortReference spirit:componentRef="ps7_0_axi_periph" spirit:portRef="M00_ARESETN"/>
-        <spirit:internalPortReference spirit:componentRef="axi_vdma_vga_mm2s" spirit:portRef="axi_resetn"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>processing_system7_0_100M_interconnect_aresetn</spirit:name>
@@ -923,26 +924,6 @@
         <spirit:internalPortReference spirit:componentRef="vdma_camera_s2mm" spirit:portRef="s_axis_s2mm_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>ov7670_controller_0_sioc</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ov7670_controller_0" spirit:portRef="sioc"/>
-        <spirit:externalPortReference spirit:portRef="ov7670_sioc"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>ov7670_controller_0_config_finished</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ov7670_controller_0" spirit:portRef="config_finished"/>
-        <spirit:externalPortReference spirit:portRef="config_finished"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>Net</spirit:name>
-        <spirit:externalPortReference spirit:portRef="ov7670_siod"/>
-        <spirit:internalPortReference spirit:componentRef="ov7670_controller_0" spirit:portRef="siod"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>ov7670_controller_0_xclk</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="ov7670_controller_0" spirit:portRef="xclk"/>
-        <spirit:externalPortReference spirit:portRef="ov7670_xclk"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
         <spirit:name>pwdn_dout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="pwdn" spirit:portRef="dout"/>
         <spirit:externalPortReference spirit:portRef="ov7670_pwdn"/>
@@ -966,6 +947,26 @@
         <spirit:name>xlconcat_0_dout</spirit:name>
         <spirit:internalPortReference spirit:componentRef="xlconcat_0" spirit:portRef="dout"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0" spirit:portRef="IRQ_F2P"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ov7670_controller_1_config_finished</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ov7670_controller_0" spirit:portRef="config_finished"/>
+        <spirit:externalPortReference spirit:portRef="config_finished"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ov7670_controller_1_sioc</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ov7670_controller_0" spirit:portRef="sioc"/>
+        <spirit:externalPortReference spirit:portRef="ov7670_sioc"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Net</spirit:name>
+        <spirit:externalPortReference spirit:portRef="ov7670_siod"/>
+        <spirit:internalPortReference spirit:componentRef="ov7670_controller_0" spirit:portRef="siod"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ov7670_controller_1_xclk</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="ov7670_controller_0" spirit:portRef="xclk"/>
+        <spirit:externalPortReference spirit:portRef="ov7670_xclk"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

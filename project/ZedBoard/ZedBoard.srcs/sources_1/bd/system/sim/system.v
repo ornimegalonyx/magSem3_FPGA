@@ -1,8 +1,8 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-//Date        : Fri Dec 10 17:21:53 2021
-//Host        : Pavel-PC running 64-bit major release  (build 9200)
+//Date        : Sat Dec 18 23:43:29 2021
+//Host        : DESKTOP-3GDJ0OK running 64-bit major release  (build 9200)
 //Command     : generate_target system.bd
 //Design      : system
 //Purpose     : IP block netlist
@@ -564,7 +564,7 @@ module s00_couplers_imp_11SE3QO
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=23,numReposBlks=19,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=19,da_board_cnt=1,da_clkrst_cnt=8,da_ps7_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=22,numReposBlks=18,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=19,da_board_cnt=1,da_clkrst_cnt=8,da_ps7_cnt=2,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (DDR_addr,
     DDR_ba,
@@ -632,7 +632,7 @@ module system
   output ov7670_sioc;
   inout ov7670_siod;
   input ov7670_vsync;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.OV7670_XCLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.OV7670_XCLK, CLK_DOMAIN system_ov7670_controller_0_0_xclk, FREQ_HZ 100000000, PHASE 0.000" *) output ov7670_xclk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.OV7670_XCLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.OV7670_XCLK, CLK_DOMAIN system_ov7670_controller_1_0_xclk, FREQ_HZ 100000000, PHASE 0.000" *) output ov7670_xclk;
   output [3:0]vga_b;
   output [3:0]vga_g;
   output vga_hsync;
@@ -670,9 +670,9 @@ module system
   wire ov7670_axi_stream_ca_0_m_axis_TREADY;
   wire ov7670_axi_stream_ca_0_m_axis_TUSER;
   wire ov7670_axi_stream_ca_0_m_axis_TVALID;
-  wire ov7670_controller_0_config_finished;
-  wire ov7670_controller_0_sioc;
-  wire ov7670_controller_0_xclk;
+  wire ov7670_controller_1_config_finished;
+  wire ov7670_controller_1_sioc;
+  wire ov7670_controller_1_xclk;
   wire [7:0]ov7670_data_1;
   wire ov7670_href_1;
   wire ov7670_pclk_1;
@@ -838,15 +838,15 @@ module system
   wire [1:0]xlconcat_0_dout;
   wire [0:0]xlconstant_0_dout;
 
-  assign config_finished = ov7670_controller_0_config_finished;
+  assign config_finished = ov7670_controller_1_config_finished;
   assign ov7670_data_1 = ov7670_data[7:0];
   assign ov7670_href_1 = ov7670_href;
   assign ov7670_pclk_1 = ov7670_pclk;
   assign ov7670_pwdn[0] = pwdn_dout;
   assign ov7670_reset[0] = reset_dout;
-  assign ov7670_sioc = ov7670_controller_0_sioc;
+  assign ov7670_sioc = ov7670_controller_1_sioc;
   assign ov7670_vsync_1 = ov7670_vsync;
-  assign ov7670_xclk = ov7670_controller_0_xclk;
+  assign ov7670_xclk = ov7670_controller_1_xclk;
   assign vga_b[3:0] = mux_0_vga_b_o;
   assign vga_g[3:0] = mux_0_vga_g_o;
   assign vga_hsync = v_axi4s_vid_out_0_vid_hsync;
@@ -897,14 +897,6 @@ module system
        (.clk_in1(processing_system7_0_FCLK_CLK0),
         .clk_out1(clk_wiz_25M175_clk_out1),
         .locked(clk_wiz_25M175_locked));
-  system_ila_0_1 ila_0
-       (.clk(clk_wiz_25M175_clk_out1),
-        .probe0(v_axi4s_vid_out_0_vid_vsync),
-        .probe1(v_axi4s_vid_out_0_vid_hsync),
-        .probe2(v_axi4s_vid_out_0_vid_data),
-        .probe3(mux_0_vga_r_o),
-        .probe4(mux_0_vga_g_o),
-        .probe5(mux_0_vga_b_o));
   system_xlconstant_0_0 logical0
        (.dout(xlconstant_0_dout));
   system_mux_0_0 mux_0
@@ -924,13 +916,13 @@ module system
         .m_axis_tvalid(ov7670_axi_stream_ca_0_m_axis_TVALID),
         .pclk(ov7670_pclk_1),
         .vsync(ov7670_vsync_1));
-  system_ov7670_controller_0_0 ov7670_controller_0
+  system_ov7670_controller_1_0 ov7670_controller_0
        (.clk(clk_wiz_25M175_clk_out1),
-        .config_finished(ov7670_controller_0_config_finished),
+        .config_finished(ov7670_controller_1_config_finished),
         .resend(xlconstant_0_dout),
-        .sioc(ov7670_controller_0_sioc),
+        .sioc(ov7670_controller_1_sioc),
         .siod(ov7670_siod),
-        .xclk(ov7670_controller_0_xclk));
+        .xclk(ov7670_controller_1_xclk));
   system_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -1205,7 +1197,7 @@ module system
   system_v_axi4s_vid_out_0_0 v_axi4s_vid_out_0
        (.aclk(clk_wiz_25M175_clk_out1),
         .aclken(xlconstant_0_dout),
-        .aresetn(1'b1),
+        .aresetn(rst_clk25M175_peripheral_aresetn),
         .fid(1'b0),
         .s_axis_video_tdata(axi_vdma_vga_mm2s_M_AXIS_MM2S_TDATA),
         .s_axis_video_tlast(axi_vdma_vga_mm2s_M_AXIS_MM2S_TLAST),

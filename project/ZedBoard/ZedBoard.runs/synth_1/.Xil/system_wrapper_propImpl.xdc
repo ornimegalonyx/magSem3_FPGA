@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/work/miet/mag_sem_3/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc rfile:../../../../../src/xdc/zedboard_master_XDC_RevC_D_v3.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc rfile:../../../../../src/xdc/zedboard_master_XDC_RevC_D_v3.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:187 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y21  [get_ports {vga_b[0]}];  # "VGA-B1"
 set_property src_info {type:XDC file:1 line:188 export:INPUT save:INPUT read:READ} [current_design]

@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Dec 10 15:28:02 2021
+# Process ID: 7252
+# Current directory: c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20680 C:\work\miet\mag_sem_3\magSem3_FPGA\project\ZedBoard\ZedBoard.xpr
+# Log file: c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/vivado.log
+# Journal file: c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/work/miet/mag_sem_3/magSem3_FPGA/src/vivado-library'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/work/miet/mag_sem_3/magSem3_FPGA/src/ov7670_axi_stream_capture'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/work/miet/mag_sem_3/magSem3_FPGA/src/VGA_1.0-master'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/work/miet/mag_sem_3/magSem3_FPGA/src/ip_repo_ov7670'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 908.859 ; gain = 191.648
+update_compile_order -fileset sources_1
+open_bd_design {C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/system.bd}
+Adding cell -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_25M175
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - logical0
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:ip:axi_vdma:6.3 - vdma_camera_s2mm
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding cell -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk25M175
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:module_ref:mux:1.0 - mux_0
+Adding cell -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_vga_mm2s
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - processing_system7_0_100M
+Adding cell -- xilinx.com:ip:smartconnect:1.0 - smartconnect_0
+Adding cell -- xilinx.com:module_ref:ov7670_axi_stream_capture:1.0 - ov7670_axi_stream_ca_0
+Adding cell -- user.org:user:ov7670_controller:1.0 - ov7670_controller_0
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - pwdn
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - reset
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Successfully read diagram <system> from BD file <C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1018.438 ; gain = 89.180
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 10 15:43:58 2021...

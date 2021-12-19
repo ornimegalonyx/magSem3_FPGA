@@ -206,19 +206,6 @@ proc create_root_design { parentCell } {
    CONFIG.USE_RESET {false} \
  ] $clk_wiz_25M175
 
-  # Create instance: ila_0, and set properties
-  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
-  set_property -dict [ list \
-   CONFIG.C_DATA_DEPTH {8192} \
-   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
-   CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {6} \
-   CONFIG.C_PROBE2_WIDTH {24} \
-   CONFIG.C_PROBE3_WIDTH {4} \
-   CONFIG.C_PROBE4_WIDTH {4} \
-   CONFIG.C_PROBE5_WIDTH {4} \
- ] $ila_0
-
   # Create instance: logical0, and set properties
   set logical0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 logical0 ]
   set_property -dict [ list \
@@ -733,15 +720,15 @@ proc create_root_design { parentCell } {
   # Create port connections
   connect_bd_net -net Net [get_bd_ports ov7670_siod] [get_bd_pins ov7670_controller_0/siod]
   connect_bd_net -net axi_vdma_vga_mm2s_mm2s_introut [get_bd_pins axi_vdma_vga_mm2s/mm2s_introut] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net clk_wiz_25M175_clk_out1 [get_bd_pins axi_vdma_vga_mm2s/m_axis_mm2s_aclk] [get_bd_pins clk_wiz_25M175/clk_out1] [get_bd_pins ila_0/clk] [get_bd_pins ov7670_controller_0/clk] [get_bd_pins rst_clk25M175/slowest_sync_clk] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_tc_0/clk]
+  connect_bd_net -net clk_wiz_25M175_clk_out1 [get_bd_pins axi_vdma_vga_mm2s/m_axis_mm2s_aclk] [get_bd_pins clk_wiz_25M175/clk_out1] [get_bd_pins ov7670_controller_0/clk] [get_bd_pins rst_clk25M175/slowest_sync_clk] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_tc_0/clk]
   connect_bd_net -net clk_wiz_25M175_locked [get_bd_pins clk_wiz_25M175/locked] [get_bd_pins rst_clk25M175/dcm_locked]
-  connect_bd_net -net mux_0_vga_b_o [get_bd_ports vga_b] [get_bd_pins ila_0/probe5] [get_bd_pins mux_0/vga_b_o]
-  connect_bd_net -net mux_0_vga_g_o [get_bd_ports vga_g] [get_bd_pins ila_0/probe4] [get_bd_pins mux_0/vga_g_o]
-  connect_bd_net -net mux_0_vga_r_o [get_bd_ports vga_r] [get_bd_pins ila_0/probe3] [get_bd_pins mux_0/vga_r_o]
+  connect_bd_net -net mux_0_vga_b_o [get_bd_ports vga_b] [get_bd_pins mux_0/vga_b_o]
+  connect_bd_net -net mux_0_vga_g_o [get_bd_ports vga_g] [get_bd_pins mux_0/vga_g_o]
+  connect_bd_net -net mux_0_vga_r_o [get_bd_ports vga_r] [get_bd_pins mux_0/vga_r_o]
   connect_bd_net -net ov7670_axi_stream_ca_0_aclk [get_bd_pins ov7670_axi_stream_ca_0/aclk] [get_bd_pins vdma_camera_s2mm/s_axis_s2mm_aclk]
-  connect_bd_net -net ov7670_controller_0_config_finished [get_bd_ports config_finished] [get_bd_pins ov7670_controller_0/config_finished]
-  connect_bd_net -net ov7670_controller_0_sioc [get_bd_ports ov7670_sioc] [get_bd_pins ov7670_controller_0/sioc]
-  connect_bd_net -net ov7670_controller_0_xclk [get_bd_ports ov7670_xclk] [get_bd_pins ov7670_controller_0/xclk]
+  connect_bd_net -net ov7670_controller_1_config_finished [get_bd_ports config_finished] [get_bd_pins ov7670_controller_0/config_finished]
+  connect_bd_net -net ov7670_controller_1_sioc [get_bd_ports ov7670_sioc] [get_bd_pins ov7670_controller_0/sioc]
+  connect_bd_net -net ov7670_controller_1_xclk [get_bd_ports ov7670_xclk] [get_bd_pins ov7670_controller_0/xclk]
   connect_bd_net -net ov7670_data_1 [get_bd_ports ov7670_data] [get_bd_pins ov7670_axi_stream_ca_0/d]
   connect_bd_net -net ov7670_href_1 [get_bd_ports ov7670_href] [get_bd_pins ov7670_axi_stream_ca_0/href]
   connect_bd_net -net ov7670_pclk_1 [get_bd_ports ov7670_pclk] [get_bd_pins ov7670_axi_stream_ca_0/pclk]
@@ -752,11 +739,11 @@ proc create_root_design { parentCell } {
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins processing_system7_0_100M/ext_reset_in] [get_bd_pins rst_clk25M175/ext_reset_in]
   connect_bd_net -net pwdn_dout [get_bd_ports ov7670_pwdn] [get_bd_pins pwdn/dout]
   connect_bd_net -net reset_dout [get_bd_ports ov7670_reset] [get_bd_pins reset/dout]
-  connect_bd_net -net rst_clk25M175_peripheral_aresetn [get_bd_pins rst_clk25M175/peripheral_aresetn] [get_bd_pins v_tc_0/resetn]
+  connect_bd_net -net rst_clk25M175_peripheral_aresetn [get_bd_pins rst_clk25M175/peripheral_aresetn] [get_bd_pins v_axi4s_vid_out_0/aresetn] [get_bd_pins v_tc_0/resetn]
   connect_bd_net -net v_axi4s_vid_out_0_vid_active_video [get_bd_pins mux_0/cntrl_i] [get_bd_pins v_axi4s_vid_out_0/vid_active_video]
-  connect_bd_net -net v_axi4s_vid_out_0_vid_data [get_bd_pins ila_0/probe2] [get_bd_pins mux_0/data_i] [get_bd_pins v_axi4s_vid_out_0/vid_data]
-  connect_bd_net -net v_axi4s_vid_out_0_vid_hsync [get_bd_ports vga_hsync] [get_bd_pins ila_0/probe1] [get_bd_pins v_axi4s_vid_out_0/vid_hsync]
-  connect_bd_net -net v_axi4s_vid_out_0_vid_vsync [get_bd_ports vga_vsync] [get_bd_pins ila_0/probe0] [get_bd_pins v_axi4s_vid_out_0/vid_vsync]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_data [get_bd_pins mux_0/data_i] [get_bd_pins v_axi4s_vid_out_0/vid_data]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_hsync [get_bd_ports vga_hsync] [get_bd_pins v_axi4s_vid_out_0/vid_hsync]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_vsync [get_bd_ports vga_vsync] [get_bd_pins v_axi4s_vid_out_0/vid_vsync]
   connect_bd_net -net v_axi4s_vid_out_0_vtg_ce [get_bd_pins v_axi4s_vid_out_0/vtg_ce] [get_bd_pins v_tc_0/gen_clken]
   connect_bd_net -net vdma_camera_s2mm_s2mm_introut [get_bd_pins vdma_camera_s2mm/s2mm_introut] [get_bd_pins xlconcat_0/In1]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/IRQ_F2P] [get_bd_pins xlconcat_0/dout]

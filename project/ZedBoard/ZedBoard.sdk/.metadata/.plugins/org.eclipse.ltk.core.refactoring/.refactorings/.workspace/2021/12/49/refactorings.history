@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;app_test/src/main_webcam.cc&apos;" deleteContents="false" description="Delete resource &apos;app_test/src/main_webcam.cc&apos;" element1="/app_test/src/main_webcam.cc" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1638746301798"/>
-</session>

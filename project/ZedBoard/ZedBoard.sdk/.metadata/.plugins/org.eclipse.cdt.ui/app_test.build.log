@@ -1,8 +1,0 @@
-03:09:30 **** Incremental Build of configuration Debug for project app_test ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Цель `main-build' не требует выполнения команд.
-
-03:09:30 Build Finished (took 317ms)
-
