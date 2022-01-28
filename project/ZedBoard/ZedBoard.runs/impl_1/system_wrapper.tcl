@@ -65,27 +65,27 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param chipscope.maxJobs 2
   create_project -in_memory -part xc7z020clg484-1
-  set_property board_part digilentinc.com:zedboard:part0:1.0 [current_project]
+  set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.xpr [current_project]
+  set_property webtalk.parent_dir C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/wt [current_project]
+  set_property parent.project_path C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.xpr [current_project]
   set_property ip_repo_paths {
-  C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/vivado-library
-  C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/ov7670_axi_stream_capture
-  C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/VGA_1.0-master
-  C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/ip_repo_ov7670
+  C:/work/miet/mag_sem_3/magSem3_FPGA/src/ip_repo_ov7670/ov7670_decode_stream
+  C:/work/miet/mag_sem_3/magSem3_FPGA/src/ip_repo_ov7670/stream_to_vga
 } [current_project]
-  set_property ip_output_repo C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/ip [current_project]
+  update_ip_catalog
+  set_property ip_output_repo C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/system_wrapper.dcp
+  add_files -quiet C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/system_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/system.bd
+  add_files C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/system.bd
   set_param project.isImplRun false
-  read_xdc C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc
+  read_xdc C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/constrs_1/imports/xdc/zedboard_v2.xdc
   set_param project.isImplRun true
   link_design -top system_wrapper -part xc7z020clg484-1
   set_param project.isImplRun false

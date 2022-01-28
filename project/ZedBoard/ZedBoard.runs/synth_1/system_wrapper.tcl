@@ -23,66 +23,50 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/wt [current_project]
-set_property parent.project_path C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.xpr [current_project]
+set_property webtalk.parent_dir C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/wt [current_project]
+set_property parent.project_path C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part digilentinc.com:zedboard:part0:1.0 [current_project]
+set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
 set_property ip_repo_paths {
-  c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/vivado-library
-  c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/ov7670_axi_stream_capture
-  c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/VGA_1.0-master
-  c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/ip_repo_ov7670
+  c:/work/miet/mag_sem_3/magSem3_FPGA/src/ip_repo_ov7670/ov7670_decode_stream
+  c:/work/miet/mag_sem_3/magSem3_FPGA/src/ip_repo_ov7670/stream_to_vga
 } [current_project]
-set_property ip_output_repo c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/ip [current_project]
+update_ip_catalog
+set_property ip_output_repo c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/hdl/system_wrapper.v
-add_files C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/system.bd
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_clk_wiz_0_1/system_clk_wiz_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_clk_wiz_0_1/system_clk_wiz_0_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_clk_wiz_0_1/system_clk_wiz_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_v_tc_0_0/system_v_tc_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_v_tc_0_0/system_v_tc_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_s2mm_1/system_vdma_s2mm_1.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_s2mm_1/system_vdma_s2mm_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_s2mm_1/system_vdma_s2mm_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0_2/system_proc_sys_reset_0_2_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0_2/system_proc_sys_reset_0_2.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_proc_sys_reset_0_2/system_proc_sys_reset_0_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_10/bd_919a_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_17/bd_919a_s01a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_20/bd_919a_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_21/bd_919a_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_22/bd_919a_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_23/bd_919a_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_24/bd_919a_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_25/bd_919a_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_18/bd_919a_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_19/bd_919a_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_11/bd_919a_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_12/bd_919a_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_13/bd_919a_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_2/bd_919a_arsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_3/bd_919a_rsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_4/bd_919a_awsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_5/bd_919a_wsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_6/bd_919a_bsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_1/bd_919a_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/bd_0/ip/ip_1/bd_919a_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_smartconnect_0_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_xbar_1/system_xbar_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/system_ooc.xdc]
+read_verilog -library xil_defaultlib C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/imports/hdl/system_wrapper.v
+add_files C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/system.bd
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_fifo_mm2s_0/system_fifo_mm2s_0.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_fifo_mm2s_0/system_fifo_mm2s_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_fifo_s2mm_0/system_fifo_s2mm_0.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_fifo_s2mm_0/system_fifo_s2mm_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_fifo_s2mm_0/system_fifo_s2mm_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_ov7670_pclk_0/system_rst_ov7670_pclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_ov7670_pclk_0/system_rst_ov7670_pclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_ov7670_pclk_0/system_rst_ov7670_pclk_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_100M_0/system_rst_processing_system7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_100M_0/system_rst_processing_system7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_vga_clk25_0/system_rst_vga_clk25_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_rst_vga_clk25_0/system_rst_vga_clk25_0.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_mm2s_0/system_vdma_mm2s_0.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_mm2s_0/system_vdma_mm2s_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_mm2s_0/system_vdma_mm2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_s2mm_0/system_vdma_s2mm_0.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_s2mm_0/system_vdma_s2mm_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_s2mm_0/system_vdma_s2mm_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/system_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -92,12 +76,12 @@ set_property used_in_implementation false [get_files -all C:/Users/Viktor/Deskto
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc
-set_property used_in_implementation false [get_files C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/src/xdc/zedboard_master_XDC_RevC_D_v3.xdc]
+read_xdc C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/constrs_1/imports/xdc/zedboard_v2.xdc
+set_property used_in_implementation false [get_files C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/constrs_1/imports/xdc/zedboard_v2.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
-set_param ips.enableIPCacheLiteLoad 0
+set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
 synth_design -top system_wrapper -part xc7z020clg484-1

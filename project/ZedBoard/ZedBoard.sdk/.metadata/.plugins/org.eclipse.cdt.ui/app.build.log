@@ -1,0 +1,43 @@
+15:20:08 **** Incremental Build of configuration Debug for project app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/app.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/app.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/app.d" -MT"src/app.o" -o "src/app.o" "../src/app.c"
+../src/app.c: In function 'main':
+../src/app.c:40:19: warning: initialization of 'u16 *' {aka 'short unsigned int *'} from incompatible pointer type 'int *' [-Wincompatible-pointer-types]
+   u16* buffer_1 = (int*)(BUFFER_BASEADDR);
+                   ^
+../src/app.c:41:19: warning: initialization of 'u16 *' {aka 'short unsigned int *'} from incompatible pointer type 'int *' [-Wincompatible-pointer-types]
+   u16* buffer_2 = (int*)(BUFFER_BASEADDR + ADDR_OFFSET);
+                   ^
+../src/app.c:36:18: warning: unused variable 'IntcConfigPtr' [-Wunused-variable]
+   XScuGic_Config IntcConfigPtr;
+                  ^~~~~~~~~~~~~
+../src/app.c:35:11: warning: unused variable 'Intc' [-Wunused-variable]
+   XScuGic Intc;
+           ^~~~
+At top level:
+../src/app.c:214:12: warning: 'getI' defined but not used [-Wunused-function]
+ static int getI(int i, int j) { return i * WIDTH + j; }
+            ^~~~
+../src/app.c:156:5: warning: 'SetupIntrSystem' defined but not used [-Wunused-function]
+ int SetupIntrSystem(XAxiVdma* S2MmPtr, XScuGic* IntcInstancePtr,
+     ^~~~~~~~~~~~~~~
+'Finished building: ../src/app.c'
+' '
+'Building target: app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../app_bsp/ps7_cortexa9_0/lib -o "app.elf"  ./src/app.o ./src/vdma_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size app.elf  |tee "app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  53632	   2584	  24104	  80320	  139c0	app.elf
+'Finished building: app.elf.size'
+' '
+
+15:20:10 Build Finished (took 1s.534ms)
+

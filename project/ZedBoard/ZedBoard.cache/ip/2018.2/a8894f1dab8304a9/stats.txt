@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Sun Dec 05 21:31:35 UTC 2021
-VLNV: digilentinc.com:IP:PmodMTDS:1.0
-SynthRuntime: 85

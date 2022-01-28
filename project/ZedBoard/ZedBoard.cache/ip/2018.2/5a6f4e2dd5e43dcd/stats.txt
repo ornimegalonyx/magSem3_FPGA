@@ -1,4 +1,0 @@
-NumberHits:2
-Timestamp: Sun Nov 28 09:26:26 UTC 2021
-VLNV: xilinx.com:user:VGA:1.0
-SynthRuntime: 155

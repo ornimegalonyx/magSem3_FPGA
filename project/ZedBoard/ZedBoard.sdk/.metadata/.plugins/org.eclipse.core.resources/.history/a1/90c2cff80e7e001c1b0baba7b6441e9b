@@ -1,0 +1,262 @@
+//#include "xparameters.h"
+//#include "xil_io.h"
+//#include "xil_cache.h"
+//#include <stdint.h>
+#include <string.h>
+#include "camera.h"
+#include "xaxivdma.h"
+#include "xaxivdma_hw.h"
+
+#include "xscugic.h"
+#include "xil_exception.h"
+
+#define OV7670_STREAM							0x43C00000
+#define VDMA_MM2S								0x43000000
+#define VDMA_S2MM								0x43010000
+
+#define HEIGHT                                  480
+#define WIDTH                                   640
+
+// Definitions
+#define IMAGE_WIDTH								WIDTH
+#define IMAGE_HEIGHT							HEIGHT
+
+#define R_MASK									0xF800
+#define G_MASK									0x7E0
+#define B_MASK									0x1F
+
+#define THRESHOLD								0x7FFF
+
+#define R_SHIFT									11
+#define G_SHIFT									5
+#define B_SHIFT									0
+
+#define FB1_START								0x11000000
+#define FB2_START								0x12000000
+#define FB3_START								0x13000000
+
+/* Register offsets */
+#define OFFSET_PARK_PTR_REG                     0x28
+#define OFFSET_VERSION                          0x2c
+
+#define OFFSET_VDMA_MM2S_CONTROL_REGISTER       0x00
+#define OFFSET_VDMA_MM2S_STATUS_REGISTER        0x04
+#define OFFSET_VDMA_MM2S_REG_INDEX              0x44
+#define OFFSET_VDMA_MM2S_VSIZE                  0x50
+#define OFFSET_VDMA_MM2S_HSIZE                  0x54
+#define OFFSET_VDMA_MM2S_FRMDLY_STRIDE          0x58
+#define OFFSET_VDMA_MM2S_FRAMEBUFFER1           0x5c
+#define OFFSET_VDMA_MM2S_FRAMEBUFFER2           0x60
+#define OFFSET_VDMA_MM2S_FRAMEBUFFER3           0x64
+#define OFFSET_VDMA_MM2S_FRAMEBUFFER4           0x68
+
+#define OFFSET_VDMA_S2MM_CONTROL_REGISTER       0x30
+#define OFFSET_VDMA_S2MM_STATUS_REGISTER        0x34
+#define OFFSET_VDMA_S2MM_IRQ_MASK               0x3c
+#define OFFSET_VDMA_S2MM_REG_INDEX              0x44
+#define OFFSET_VDMA_S2MM_VSIZE                  0xa0
+#define OFFSET_VDMA_S2MM_HSIZE                  0xa4
+#define OFFSET_VDMA_S2MM_FRMDLY_STRIDE          0xa8
+
+#define OFFSET_VDMA_S2MM_FRAMEBUFFER1           0xac-0x30
+#define OFFSET_VDMA_S2MM_FRAMEBUFFER2           0xb0-0x30
+#define OFFSET_VDMA_S2MM_FRAMEBUFFER3           0xb4-0x30
+#define OFFSET_VDMA_S2MM_FRAMEBUFFER4           0xb8-0x30
+
+/* S2MM and MM2S control register flags */
+#define VDMA_CONTROL_REGISTER_START                     0x00000001
+#define VDMA_CONTROL_REGISTER_CIRCULAR_PARK             0x00000002
+#define VDMA_CONTROL_REGISTER_RESET                     0x00000004
+#define VDMA_CONTROL_REGISTER_GENLOCK_ENABLE            0x00000008
+#define VDMA_CONTROL_REGISTER_FrameCntEn                0x00000010
+#define VDMA_CONTROL_REGISTER_INTERNAL_GENLOCK          0x00000080
+#define VDMA_CONTROL_REGISTER_WrPntr                    0x00000f00
+#define VDMA_CONTROL_REGISTER_FrmCtn_IrqEn              0x00001000
+#define VDMA_CONTROL_REGISTER_DlyCnt_IrqEn              0x00002000
+#define VDMA_CONTROL_REGISTER_ERR_IrqEn                 0x00004000
+#define VDMA_CONTROL_REGISTER_Repeat_En                 0x00008000
+#define VDMA_CONTROL_REGISTER_InterruptFrameCount       0x00ff0000
+#define VDMA_CONTROL_REGISTER_IRQDelayCount             0xff000000
+
+/* S2MM status register */
+#define VDMA_STATUS_REGISTER_HALTED                     0x00000001  // Read-only
+#define VDMA_STATUS_REGISTER_VDMAInternalError          0x00000010  // Read or write-clear
+#define VDMA_STATUS_REGISTER_VDMASlaveError             0x00000020  // Read-only
+#define VDMA_STATUS_REGISTER_VDMADecodeError            0x00000040  // Read-only
+#define VDMA_STATUS_REGISTER_StartOfFrameEarlyError     0x00000080  // Read-only
+#define VDMA_STATUS_REGISTER_EndOfLineEarlyError        0x00000100  // Read-only
+#define VDMA_STATUS_REGISTER_StartOfFrameLateError      0x00000800  // Read-only
+#define VDMA_STATUS_REGISTER_FrameCountInterrupt        0x00001000  // Read-only
+#define VDMA_STATUS_REGISTER_DelayCountInterrupt        0x00002000  // Read-only
+#define VDMA_STATUS_REGISTER_ErrorInterrupt             0x00004000  // Read-only
+#define VDMA_STATUS_REGISTER_EndOfLineLateError         0x00008000  // Read-only
+#define VDMA_STATUS_REGISTER_FrameCount                 0x00ff0000  // Read-only
+#define VDMA_STATUS_REGISTER_DelayCount                 0xff000000  // Read-only
+
+#define XPAR_INTC_0_DEVICE_ID                 XPAR_PS7_SCUGIC_0_DEVICE_ID
+
+
+static UINTPTR ReadFrameAddr1;
+static UINTPTR WriteFrameAddr1;
+static UINTPTR ReadFrameAddr2;
+static UINTPTR WriteFrameAddr2;
+static UINTPTR ReadFrameAddr3;
+static UINTPTR WriteFrameAddr3;
+
+uint16_t*		buffer_1;
+uint16_t*		buffer_2;
+
+int main() {
+
+    // Start Initialize Camera Module
+	int result;
+    result = InitCamera();
+    if (result != XST_SUCCESS) {
+    	return 0;
+    }
+
+    // Set RGB 565 mode
+    InitRGB565();
+
+    // Set QVGA mode
+    InitVGA();
+
+    // Load default Camera registers
+    InitDefaultReg();
+
+    // VDMA Configuration
+
+	XAxiVdma vdma_mm2s;
+	XAxiVdma vdma_s2mm;
+	XAxiVdma_Config * vdma_mm2s_cfg;
+	XAxiVdma_Config * vdma_s2mm_cfg;
+	XAxiVdma_DmaSetup dma_mm2s_setup;
+	XAxiVdma_DmaSetup dma_s2mm_setup;
+
+	// Step 1: lookup the memory structure that is used to access the vdma driver.
+	vdma_mm2s_cfg = XAxiVdma_LookupConfig(XPAR_VDMA_MM2S_DEVICE_ID);
+	vdma_mm2s_cfg->Mm2SFrmStoreRegEn = 1;
+	// Step 2: Initialize the memory structure and the hardware.
+	if (XST_SUCCESS != XAxiVdma_CfgInitialize(&vdma_mm2s,
+			vdma_mm2s_cfg, XPAR_VDMA_MM2S_BASEADDR)) {
+		xil_printf("MM2S Did not initialize.\r\n");
+	}
+
+	dma_mm2s_setup.VertSizeInput = HEIGHT;
+	dma_mm2s_setup.HoriSizeInput = WIDTH * 2;
+	dma_mm2s_setup.Stride = WIDTH * 2;
+	dma_mm2s_setup.FrameDelay = 0;
+	dma_mm2s_setup.EnableCircularBuf = 0;
+	dma_mm2s_setup.EnableSync = 0;
+	dma_mm2s_setup.PointNum = 0;
+	dma_mm2s_setup.EnableFrameCounter = 0;
+	dma_mm2s_setup.FixedFrameStoreAddr = 0;
+	if (XST_SUCCESS != XAxiVdma_DmaConfig(&vdma_mm2s, XAXIVDMA_READ,
+			&dma_mm2s_setup)) {
+		xil_printf("MM2S DMA Config Failed\r\n");
+	}
+
+
+	// Step 3: (optional) set the frame store number.
+	if (XST_SUCCESS != XAxiVdma_SetFrmStore(&vdma_mm2s, 3,
+			XAXIVDMA_READ)) {
+		xil_printf("MM2S Set Frame Store Failed.");
+	}
+
+	// Initialization is complete at this point.
+
+	ReadFrameAddr1 = FB1_START;
+	ReadFrameAddr2 = FB2_START;
+	ReadFrameAddr3 = FB3_START;
+
+
+	// We need to give the frame buffer pointers to the memory that it will use.
+	dma_mm2s_setup.FrameStoreStartAddr[0] = FB2_START;
+	buffer_2 = (int*)FB2_START;
+	dma_mm2s_setup.FrameStoreStartAddr[1] = ReadFrameAddr2;
+	dma_mm2s_setup.FrameStoreStartAddr[2] = ReadFrameAddr3;
+
+	if (XST_SUCCESS != XAxiVdma_DmaSetBufferAddr(&vdma_mm2s,
+			XAXIVDMA_READ, dma_mm2s_setup.FrameStoreStartAddr)) {
+		xil_printf("MM2S DMA Set Address Failed Failed\r\n");
+	}
+
+	// WRITE, S2MM:
+
+	// Step 1: lookup the memory structure that is used to access the vdma driver.
+	vdma_s2mm_cfg = XAxiVdma_LookupConfig(XPAR_VDMA_S2MM_DEVICE_ID);
+	vdma_s2mm_cfg->S2MmFrmStoreRegEn = 1;
+	// Step 2: Initialize the memory structure and the hardware.
+	if (XST_SUCCESS != XAxiVdma_CfgInitialize(&vdma_s2mm,
+			vdma_s2mm_cfg, XPAR_VDMA_S2MM_BASEADDR)) {
+		xil_printf("S2MM Did not initialize.\r\n");
+	}
+
+	dma_s2mm_setup.VertSizeInput = HEIGHT;
+	dma_s2mm_setup.HoriSizeInput = WIDTH * 2;
+	dma_s2mm_setup.Stride = WIDTH * 2;
+	dma_s2mm_setup.FrameDelay = 0;
+	dma_s2mm_setup.EnableCircularBuf = 0;
+	dma_s2mm_setup.EnableSync = 0;
+	dma_s2mm_setup.PointNum = 0;
+	dma_s2mm_setup.EnableFrameCounter = 0;
+	dma_s2mm_setup.FixedFrameStoreAddr = 0;
+	if (XST_SUCCESS != XAxiVdma_DmaConfig(&vdma_s2mm, XAXIVDMA_WRITE,
+			&dma_s2mm_setup)) {
+		xil_printf("S2MM DMA Config Failed\r\n");
+	}
+
+	// Step 3: (optional) set the frame store number.
+	if (XST_SUCCESS != XAxiVdma_SetFrmStore(&vdma_s2mm, 3,
+			XAXIVDMA_WRITE)) {
+		xil_printf("S2MM Set Frame Store Failed.");
+	}
+
+	// We need to give the frame buffer pointers to the memory that it will use.
+
+	WriteFrameAddr1 = FB1_START;
+	WriteFrameAddr2 = FB2_START;
+	WriteFrameAddr3 = FB3_START;
+
+	dma_s2mm_setup.FrameStoreStartAddr[0] = WriteFrameAddr1;
+	buffer_1 = (int*)FB1_START;
+	dma_s2mm_setup.FrameStoreStartAddr[1] = WriteFrameAddr2;
+	dma_s2mm_setup.FrameStoreStartAddr[2] = WriteFrameAddr3;
+
+	if (XST_SUCCESS != XAxiVdma_DmaSetBufferAddr(&vdma_s2mm,
+			XAXIVDMA_WRITE, dma_s2mm_setup.FrameStoreStartAddr)) {
+		xil_printf("S2MM DMA Set Address Failed\r\n");
+	}
+
+	// Print a sanity message if you get this far.
+	xil_printf("Woohoo! I made it through S2MM initialization.\n\r");
+
+
+	// Start the WRITE DMA
+		if (XST_SUCCESS != XAxiVdma_DmaStart(&vdma_s2mm, XAXIVDMA_WRITE)) {
+			xil_printf("S2MM DMA START FAILED\r\n");
+		}
+
+	// Start the READ DMA
+	if (XST_SUCCESS != XAxiVdma_DmaStart(&vdma_mm2s, XAXIVDMA_READ)) {
+		xil_printf("MM2S DMA START FAILED\r\n");
+	}
+
+    XAxiVdma_DmaRegisterDump(&vdma_mm2s, XAXIVDMA_READ);
+    XAxiVdma_DmaRegisterDump(&vdma_s2mm, XAXIVDMA_WRITE);
+
+    Xil_Out32(OV7670_STREAM, 1);
+
+while(1)
+{
+
+	XAxiVdma_DmaRegisterDump(&vdma_s2mm, XAXIVDMA_WRITE);
+
+	for(int i = 0; i < WIDTH * HEIGHT * 4; i++)
+	{
+		buffer_2[i] = (buffer_1[i] > THRESHOLD) ? 0xFFFF : 0;
+	}
+
+};
+    return 0;
+}

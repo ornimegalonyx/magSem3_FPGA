@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2018.2 (64-bit)
-# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Dec 18 23:45:29 2021
-# Process ID: 5208
-# Current directory: C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jan 28 12:02:27 2022
+# Process ID: 9480
+# Current directory: C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1
 # Command line: vivado.exe -log system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
-# Log file: C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/system_wrapper.vds
-# Journal file: C:/Users/Viktor/Desktop/study/verilog_shit/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1\vivado.jou
+# Log file: C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/system_wrapper.vds
+# Journal file: C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source system_wrapper.tcl -notrace
