@@ -73,8 +73,8 @@ set rc [catch {
   set_property webtalk.parent_dir C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/wt [current_project]
   set_property parent.project_path C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.xpr [current_project]
   set_property ip_repo_paths {
-  C:/work/miet/mag_sem_3/magSem3_FPGA/src/ip_repo_ov7670/ov7670_decode_stream
-  C:/work/miet/mag_sem_3/magSem3_FPGA/src/ip_repo_ov7670/stream_to_vga
+  c:/work/miet/mag_sem_3/magSem3_FPGA/src/ip_repo_ov7670/ov7670_decode_stream
+  c:/work/miet/mag_sem_3/magSem3_FPGA/src/ip_repo_ov7670/stream_to_vga
 } [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.cache/ip [current_project]

@@ -162,8 +162,6 @@ proc create_root_design { parentCell } {
 
   set IIC_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 IIC_0 ]
 
-  set sws_8bits [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 sws_8bits ]
-
 
   # Create ports
   set ov7670_data [ create_bd_port -dir I -from 7 -to 0 ov7670_data ]
@@ -178,13 +176,6 @@ proc create_root_design { parentCell } {
   set vga_hsync [ create_bd_port -dir O vga_hsync ]
   set vga_r [ create_bd_port -dir O -from 3 -to 0 vga_r ]
   set vga_vsync [ create_bd_port -dir O vga_vsync ]
-
-  # Create instance: axi_gpio_0, and set properties
-  set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
-  set_property -dict [ list \
-   CONFIG.GPIO_BOARD_INTERFACE {sws_8bits} \
-   CONFIG.USE_BOARD_FLOW {true} \
- ] $axi_gpio_0
 
   # Create instance: axi_periph, and set properties
   set axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_periph ]
@@ -734,10 +725,8 @@ proc create_root_design { parentCell } {
  ] $vdma_s2mm_intercon
 
   # Create interface connections
-  connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports sws_8bits] [get_bd_intf_pins axi_gpio_0/GPIO]
   connect_bd_intf_net -intf_net axi_mem_intercon_M00_AXI [get_bd_intf_pins processing_system7_0/S_AXI_HP0] [get_bd_intf_pins vdma_s2mm_intercon/M00_AXI]
   connect_bd_intf_net -intf_net axi_mem_intercon_M00_AXI1 [get_bd_intf_pins processing_system7_0/S_AXI_HP1] [get_bd_intf_pins vdma_mm2s_intercon/M00_AXI]
-  connect_bd_intf_net -intf_net axi_periph_M03_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins axi_periph/M03_AXI]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_S2MM [get_bd_intf_pins vdma_s2mm/M_AXI_S2MM] [get_bd_intf_pins vdma_s2mm_intercon/S00_AXI]
   connect_bd_intf_net -intf_net axi_vdma_1_M_AXIS_MM2S [get_bd_intf_pins fifo_mm2s/S_AXIS] [get_bd_intf_pins vdma_mm2s/M_AXIS_MM2S]
   connect_bd_intf_net -intf_net axi_vdma_1_M_AXI_MM2S [get_bd_intf_pins vdma_mm2s/M_AXI_MM2S] [get_bd_intf_pins vdma_mm2s_intercon/S00_AXI]
@@ -756,7 +745,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net M01_ARESETN_1 [get_bd_pins axi_periph/M01_ARESETN] [get_bd_pins fifo_s2mm/s_aresetn] [get_bd_pins ov7670_decode_stream_0/s00_axi_aresetn] [get_bd_pins rst_ov7670_pclk/peripheral_aresetn]
   connect_bd_net -net d_1 [get_bd_ports ov7670_data] [get_bd_pins ov7670_decode_stream_0/d]
   connect_bd_net -net href_1 [get_bd_ports ov7670_href] [get_bd_pins ov7670_decode_stream_0/href]
-  connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_periph/ACLK] [get_bd_pins axi_periph/M00_ACLK] [get_bd_pins axi_periph/M02_ACLK] [get_bd_pins axi_periph/M03_ACLK] [get_bd_pins axi_periph/S00_ACLK] [get_bd_pins fifo_mm2s/s_aclk] [get_bd_pins fifo_s2mm/m_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP1_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk] [get_bd_pins vdma_mm2s/m_axi_mm2s_aclk] [get_bd_pins vdma_mm2s/m_axis_mm2s_aclk] [get_bd_pins vdma_mm2s/s_axi_lite_aclk] [get_bd_pins vdma_mm2s_intercon/ACLK] [get_bd_pins vdma_mm2s_intercon/M00_ACLK] [get_bd_pins vdma_mm2s_intercon/S00_ACLK] [get_bd_pins vdma_s2mm/m_axi_s2mm_aclk] [get_bd_pins vdma_s2mm/s_axi_lite_aclk] [get_bd_pins vdma_s2mm/s_axis_s2mm_aclk] [get_bd_pins vdma_s2mm_intercon/ACLK] [get_bd_pins vdma_s2mm_intercon/M00_ACLK] [get_bd_pins vdma_s2mm_intercon/S00_ACLK]
+  connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_periph/ACLK] [get_bd_pins axi_periph/M00_ACLK] [get_bd_pins axi_periph/M02_ACLK] [get_bd_pins axi_periph/M03_ACLK] [get_bd_pins axi_periph/S00_ACLK] [get_bd_pins fifo_mm2s/s_aclk] [get_bd_pins fifo_s2mm/m_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP1_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk] [get_bd_pins vdma_mm2s/m_axi_mm2s_aclk] [get_bd_pins vdma_mm2s/m_axis_mm2s_aclk] [get_bd_pins vdma_mm2s/s_axi_lite_aclk] [get_bd_pins vdma_mm2s_intercon/ACLK] [get_bd_pins vdma_mm2s_intercon/M00_ACLK] [get_bd_pins vdma_mm2s_intercon/S00_ACLK] [get_bd_pins vdma_s2mm/m_axi_s2mm_aclk] [get_bd_pins vdma_s2mm/s_axi_lite_aclk] [get_bd_pins vdma_s2mm/s_axis_s2mm_aclk] [get_bd_pins vdma_s2mm_intercon/ACLK] [get_bd_pins vdma_s2mm_intercon/M00_ACLK] [get_bd_pins vdma_s2mm_intercon/S00_ACLK]
   connect_bd_net -net pclk_1 [get_bd_ports ov7670_pclk] [get_bd_pins axi_periph/M01_ACLK] [get_bd_pins fifo_s2mm/s_aclk] [get_bd_pins ov7670_decode_stream_0/pclk] [get_bd_pins ov7670_decode_stream_0/s00_axi_aclk] [get_bd_pins rst_ov7670_pclk/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_ports ov7670_xclk] [get_bd_pins processing_system7_0/FCLK_CLK1]
   connect_bd_net -net processing_system7_0_FCLK_CLK2 [get_bd_pins fifo_mm2s/m_aclk] [get_bd_pins processing_system7_0/FCLK_CLK2] [get_bd_pins rst_vga_clk25/slowest_sync_clk] [get_bd_pins stream_to_vga_0/clk25]
@@ -765,7 +754,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net reset_dout [get_bd_ports ov7670_reset] [get_bd_pins reset/dout]
   connect_bd_net -net rst_ov7670_pclk1_peripheral_aresetn [get_bd_pins rst_vga_clk25/peripheral_aresetn] [get_bd_pins stream_to_vga_0/aresetn]
   connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_100M/interconnect_aresetn] [get_bd_pins vdma_mm2s_intercon/ARESETN] [get_bd_pins vdma_s2mm_intercon/ARESETN]
-  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_periph/M00_ARESETN] [get_bd_pins axi_periph/M02_ARESETN] [get_bd_pins axi_periph/M03_ARESETN] [get_bd_pins axi_periph/S00_ARESETN] [get_bd_pins fifo_mm2s/s_aresetn] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn] [get_bd_pins vdma_mm2s/axi_resetn] [get_bd_pins vdma_mm2s_intercon/M00_ARESETN] [get_bd_pins vdma_mm2s_intercon/S00_ARESETN] [get_bd_pins vdma_s2mm/axi_resetn] [get_bd_pins vdma_s2mm_intercon/M00_ARESETN] [get_bd_pins vdma_s2mm_intercon/S00_ARESETN]
+  connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins axi_periph/M00_ARESETN] [get_bd_pins axi_periph/M02_ARESETN] [get_bd_pins axi_periph/M03_ARESETN] [get_bd_pins axi_periph/S00_ARESETN] [get_bd_pins fifo_mm2s/s_aresetn] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn] [get_bd_pins vdma_mm2s/axi_resetn] [get_bd_pins vdma_mm2s_intercon/M00_ARESETN] [get_bd_pins vdma_mm2s_intercon/S00_ARESETN] [get_bd_pins vdma_s2mm/axi_resetn] [get_bd_pins vdma_s2mm_intercon/M00_ARESETN] [get_bd_pins vdma_s2mm_intercon/S00_ARESETN]
   connect_bd_net -net stream_to_vga_0_blue [get_bd_ports vga_b] [get_bd_pins stream_to_vga_0/blue]
   connect_bd_net -net stream_to_vga_0_fsync [get_bd_pins stream_to_vga_0/fsync] [get_bd_pins vdma_mm2s/mm2s_fsync]
   connect_bd_net -net stream_to_vga_0_green [get_bd_ports vga_g] [get_bd_pins stream_to_vga_0/green]
@@ -776,7 +765,6 @@ proc create_root_design { parentCell } {
   connect_bd_net -net vsync_1 [get_bd_ports ov7670_vsync] [get_bd_pins ov7670_decode_stream_0/vsync]
 
   # Create address segments
-  create_bd_addr_seg -range 0x00010000 -offset 0x41200000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] SEG_axi_gpio_0_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs ov7670_decode_stream_0/S00_AXI/S00_AXI_reg] SEG_ov7670_decode_stream_0_S00_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43000000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs vdma_mm2s/S_AXI_LITE/Reg] SEG_vdma_mm2s_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43010000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs vdma_s2mm/S_AXI_LITE/Reg] SEG_vdma_s2mm_Reg

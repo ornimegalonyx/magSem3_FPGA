@@ -19,9 +19,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 28732 
+INFO: Helper process launched with PID 16952 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 787.605 ; gain = 179.531
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 787.812 ; gain = 180.613
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/imports/hdl/system_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:36115]
@@ -30,85 +30,81 @@ INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Xilinx/Vivado/2019.1/script
 	Parameter IOSTANDARD bound to: DEFAULT - type: string 
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [D:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:36115]
-INFO: [Synth 8-6157] synthesizing module 'system' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1272]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_0' (2#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_axi_periph_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2149]
+INFO: [Synth 8-6157] synthesizing module 'system' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1286]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_periph_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2112]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_9WRM0W' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_9WRM0W' (3#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_9WRM0W' (2#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_13D45HT' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:137]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_cc_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_auto_cc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_cc_0' (4#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_auto_cc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_13D45HT' (5#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:137]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_cc_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_cc_0' (3#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_auto_cc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_13D45HT' (4#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:137]
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_19J2N8J' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:353]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_19J2N8J' (6#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:353]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_19J2N8J' (5#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:353]
 INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_2WUN5E' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:478]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_2WUN5E' (7#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:478]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_5M10I9' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:966]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (8#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_5M10I9' (9#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:966]
-INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (10#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_xbar_0_stub.v:6]
-WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (12) of module 'system_xbar_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2936]
-WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (12) of module 'system_xbar_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2940]
-INFO: [Synth 8-6155] done synthesizing module 'system_axi_periph_0' (11#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2149]
-INFO: [Synth 8-6157] synthesizing module 'system_fifo_mm2s_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_fifo_mm2s_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_fifo_mm2s_0' (12#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_fifo_mm2s_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'fifo_mm2s' of module 'system_fifo_mm2s_0' has 15 connections declared, but only 11 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1749]
-INFO: [Synth 8-6157] synthesizing module 'system_fifo_s2mm_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_fifo_s2mm_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_fifo_s2mm_0' (13#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_fifo_s2mm_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'fifo_s2mm' of module 'system_fifo_s2mm_0' has 15 connections declared, but only 13 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1761]
-INFO: [Synth 8-6157] synthesizing module 'system_ov7670_decode_stream_0_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_ov7670_decode_stream_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_ov7670_decode_stream_0_0' (14#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_ov7670_decode_stream_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (15#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'system_processing_system7_0_0' has 167 connections declared, but only 141 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1806]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_2WUN5E' (6#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:478]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_5M10I9' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:980]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (7#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_5M10I9' (8#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:980]
+INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (9#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_periph_0' (10#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2112]
+WARNING: [Synth 8-7023] instance 'axi_periph' of module 'system_axi_periph_0' has 120 connections declared, but only 109 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1602]
+INFO: [Synth 8-6157] synthesizing module 'system_fifo_mm2s_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_fifo_mm2s_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_fifo_mm2s_0' (11#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_fifo_mm2s_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'fifo_mm2s' of module 'system_fifo_mm2s_0' has 15 connections declared, but only 11 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1712]
+INFO: [Synth 8-6157] synthesizing module 'system_fifo_s2mm_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_fifo_s2mm_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_fifo_s2mm_0' (12#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_fifo_s2mm_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'fifo_s2mm' of module 'system_fifo_s2mm_0' has 15 connections declared, but only 13 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1724]
+INFO: [Synth 8-6157] synthesizing module 'system_ov7670_decode_stream_0_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_ov7670_decode_stream_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ov7670_decode_stream_0_0' (13#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_ov7670_decode_stream_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (14#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'system_processing_system7_0_0' has 167 connections declared, but only 141 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1769]
 INFO: [Synth 8-6157] synthesizing module 'system_pwdn_0' [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_pwdn_0/synth/system_pwdn_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (16#1) [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'system_pwdn_0' (17#1) [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_pwdn_0/synth/system_pwdn_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (15#1) [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system_pwdn_0' (16#1) [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_pwdn_0/synth/system_pwdn_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'system_reset_0' [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_reset_0/synth/system_reset_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' (17#1) [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'system_reset_0' (18#1) [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_reset_0/synth/system_reset_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'system_rst_ov7670_pclk_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_rst_ov7670_pclk_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_rst_ov7670_pclk_0' (19#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_rst_ov7670_pclk_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'rst_ov7670_pclk' of module 'system_rst_ov7670_pclk_0' has 10 connections declared, but only 6 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1952]
-INFO: [Synth 8-6157] synthesizing module 'system_rst_processing_system7_0_100M_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_rst_processing_system7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_rst_processing_system7_0_100M_0' (20#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_rst_processing_system7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'rst_processing_system7_0_100M' of module 'system_rst_processing_system7_0_100M_0' has 10 connections declared, but only 7 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1959]
-INFO: [Synth 8-6157] synthesizing module 'system_rst_vga_clk25_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_rst_vga_clk25_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_rst_vga_clk25_0' (21#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_rst_vga_clk25_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'rst_vga_clk25' of module 'system_rst_vga_clk25_0' has 10 connections declared, but only 6 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1967]
-INFO: [Synth 8-6157] synthesizing module 'system_stream_to_vga_0_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_stream_to_vga_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_stream_to_vga_0_0' (22#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_stream_to_vga_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'stream_to_vga_0' of module 'system_stream_to_vga_0_0' has 13 connections declared, but only 11 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1974]
-INFO: [Synth 8-6157] synthesizing module 'system_vdma_mm2s_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_vdma_mm2s_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_vdma_mm2s_0' (23#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_vdma_mm2s_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'vdma_mm2s' of module 'system_vdma_mm2s_0' has 44 connections declared, but only 40 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1986]
-INFO: [Synth 8-6157] synthesizing module 'system_vdma_mm2s_intercon_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2975]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_16HO73N' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:610]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_1' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_1' (24#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_16HO73N' (25#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:610]
-INFO: [Synth 8-6155] done synthesizing module 'system_vdma_mm2s_intercon_0' (26#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2975]
-INFO: [Synth 8-6157] synthesizing module 'system_vdma_s2mm_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_vdma_s2mm_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_vdma_s2mm_0' (27#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_vdma_s2mm_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'vdma_s2mm' of module 'system_vdma_s2mm_0' has 45 connections declared, but only 43 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2062]
-INFO: [Synth 8-6157] synthesizing module 'system_vdma_s2mm_intercon_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3145]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1KTB6MO' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:773]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_2' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_auto_pc_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_2' (28#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9480-Pavel-PC/realtime/system_auto_pc_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1KTB6MO' (29#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:773]
-INFO: [Synth 8-6155] done synthesizing module 'system_vdma_s2mm_intercon_0' (30#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3145]
-INFO: [Synth 8-6155] done synthesizing module 'system' (31#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1272]
-WARNING: [Synth 8-7023] instance 'system_i' of module 'system' has 40 connections declared, but only 39 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/imports/hdl/system_wrapper.v:136]
-INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (32#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/imports/hdl/system_wrapper.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' (16#1) [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system_reset_0' (17#1) [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_reset_0/synth/system_reset_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_ov7670_pclk_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_rst_ov7670_pclk_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_ov7670_pclk_0' (18#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_rst_ov7670_pclk_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rst_ov7670_pclk' of module 'system_rst_ov7670_pclk_0' has 10 connections declared, but only 6 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1915]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_processing_system7_0_100M_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_rst_processing_system7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_processing_system7_0_100M_0' (19#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_rst_processing_system7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rst_processing_system7_0_100M' of module 'system_rst_processing_system7_0_100M_0' has 10 connections declared, but only 7 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1922]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_vga_clk25_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_rst_vga_clk25_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_vga_clk25_0' (20#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_rst_vga_clk25_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rst_vga_clk25' of module 'system_rst_vga_clk25_0' has 10 connections declared, but only 6 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1930]
+INFO: [Synth 8-6157] synthesizing module 'system_stream_to_vga_0_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_stream_to_vga_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_stream_to_vga_0_0' (21#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_stream_to_vga_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'stream_to_vga_0' of module 'system_stream_to_vga_0_0' has 13 connections declared, but only 11 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1937]
+INFO: [Synth 8-6157] synthesizing module 'system_vdma_mm2s_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_vdma_mm2s_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_vdma_mm2s_0' (22#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_vdma_mm2s_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vdma_mm2s' of module 'system_vdma_mm2s_0' has 44 connections declared, but only 40 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1949]
+INFO: [Synth 8-6157] synthesizing module 'system_vdma_mm2s_intercon_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2952]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_16HO73N' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:624]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_1' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_1' (23#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_16HO73N' (24#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:624]
+INFO: [Synth 8-6155] done synthesizing module 'system_vdma_mm2s_intercon_0' (25#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2952]
+INFO: [Synth 8-6157] synthesizing module 'system_vdma_s2mm_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_vdma_s2mm_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_vdma_s2mm_0' (26#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_vdma_s2mm_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'vdma_s2mm' of module 'system_vdma_s2mm_0' has 45 connections declared, but only 43 given [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:2025]
+INFO: [Synth 8-6157] synthesizing module 'system_vdma_s2mm_intercon_0' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3122]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1KTB6MO' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:787]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_2' [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_2' (27#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/.Xil/Vivado-9108-Pavel-PC/realtime/system_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1KTB6MO' (28#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:787]
+INFO: [Synth 8-6155] done synthesizing module 'system_vdma_s2mm_intercon_0' (29#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:3122]
+INFO: [Synth 8-6155] done synthesizing module 'system' (30#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/synth/system.v:1286]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (31#1) [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/imports/hdl/system_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_1KTB6MO has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_1KTB6MO has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design system_vdma_s2mm_intercon_0 has unconnected port ACLK
@@ -188,7 +184,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_9WRM0W has unconnected port M_AR
 WARNING: [Synth 8-3331] design m00_couplers_imp_9WRM0W has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_9WRM0W has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 858.750 ; gain = 250.676
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 858.820 ; gain = 251.621
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -201,10 +197,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 858.750 ; gain = 250.676
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 858.820 ; gain = 251.621
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 858.750 ; gain = 250.676
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 858.820 ; gain = 251.621
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -234,8 +230,6 @@ Parsing XDC File [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.
 Finished Parsing XDC File [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_mm2s_0/system_vdma_mm2s_0/system_vdma_mm2s_0_in_context.xdc] for cell 'system_i/vdma_mm2s'
 Parsing XDC File [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_s2mm_0/system_vdma_s2mm_0/system_vdma_s2mm_0_in_context.xdc] for cell 'system_i/vdma_s2mm'
 Finished Parsing XDC File [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_vdma_s2mm_0/system_vdma_s2mm_0/system_vdma_s2mm_0_in_context.xdc] for cell 'system_i/vdma_s2mm'
-Parsing XDC File [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0/system_axi_gpio_0_0_in_context.xdc] for cell 'system_i/axi_gpio_0'
-Finished Parsing XDC File [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0/system_axi_gpio_0_0_in_context.xdc] for cell 'system_i/axi_gpio_0'
 Parsing XDC File [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_0_in_context.xdc] for cell 'system_i/axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_0_in_context.xdc] for cell 'system_i/axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0/system_auto_cc_0_in_context.xdc] for cell 'system_i/axi_periph/m01_couplers/auto_cc'
@@ -263,24 +257,24 @@ Parsing XDC File [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.
 Finished Parsing XDC File [C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 943.508 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 949.406 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 943.508 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 949.406 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'system_i/axi_periph/s00_couplers/auto_pc' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'system_i/vdma_mm2s_intercon/s00_couplers/auto_pc' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'system_i/vdma_s2mm_intercon/s00_couplers/auto_pc' at clock pin 'aclk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 946.586 ; gain = 338.512
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 952.410 ; gain = 345.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 946.586 ; gain = 338.512
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 952.410 ; gain = 345.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -562,16 +556,15 @@ Applied set_property DONT_TOUCH = true for system_i/vdma_mm2s. (constraint file 
 Applied set_property DONT_TOUCH = true for system_i/vdma_mm2s_intercon. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/vdma_s2mm. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/vdma_s2mm_intercon. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for system_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/axi_periph/m01_couplers/auto_cc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/vdma_mm2s_intercon/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for system_i/vdma_s2mm_intercon/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 946.586 ; gain = 338.512
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 952.410 ; gain = 345.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 946.586 ; gain = 338.512
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 952.410 ; gain = 345.211
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -621,7 +614,7 @@ WARNING: [Synth 8-3331] design system_axi_periph_0 has unconnected port M02_ARES
 WARNING: [Synth 8-3331] design system_axi_periph_0 has unconnected port M03_ACLK
 WARNING: [Synth 8-3331] design system_axi_periph_0 has unconnected port M03_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 946.586 ; gain = 338.512
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 952.410 ; gain = 345.211
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -637,13 +630,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/processing_syste
 INFO: [Synth 8-5578] Moved timing constraint from pin 'system_i/processing_system7_0/FCLK_CLK2' to pin 'system_i/processing_system7_0/bbstub_FCLK_CLK2/O'
 INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 946.586 ; gain = 338.512
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 952.410 ; gain = 345.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 946.586 ; gain = 338.512
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 952.410 ; gain = 345.211
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -655,7 +648,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 949.730 ; gain = 341.656
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 953.023 ; gain = 345.824
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -678,16 +671,8 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3295] tying undriven pin system_i:sws_8bits_tri_i[7] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin system_i:sws_8bits_tri_i[6] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin system_i:sws_8bits_tri_i[5] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin system_i:sws_8bits_tri_i[4] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin system_i:sws_8bits_tri_i[3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin system_i:sws_8bits_tri_i[2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin system_i:sws_8bits_tri_i[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin system_i:sws_8bits_tri_i[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 963.504 ; gain = 355.430
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 967.887 ; gain = 360.688
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -700,7 +685,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 963.504 ; gain = 355.430
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 967.887 ; gain = 360.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -712,25 +697,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 963.504 ; gain = 355.430
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 967.887 ; gain = 360.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 963.504 ; gain = 355.430
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 967.887 ; gain = 360.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 963.504 ; gain = 355.430
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 967.887 ; gain = 360.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 963.504 ; gain = 355.430
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 967.887 ; gain = 360.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -745,17 +730,16 @@ Report BlackBoxes:
 |3     |system_auto_pc_0                       |         1|
 |4     |system_auto_pc_1                       |         1|
 |5     |system_auto_pc_2                       |         1|
-|6     |system_axi_gpio_0_0                    |         1|
-|7     |system_fifo_mm2s_0                     |         1|
-|8     |system_fifo_s2mm_0                     |         1|
-|9     |system_ov7670_decode_stream_0_0        |         1|
-|10    |system_processing_system7_0_0          |         1|
-|11    |system_rst_ov7670_pclk_0               |         1|
-|12    |system_rst_processing_system7_0_100M_0 |         1|
-|13    |system_rst_vga_clk25_0                 |         1|
-|14    |system_stream_to_vga_0_0               |         1|
-|15    |system_vdma_mm2s_0                     |         1|
-|16    |system_vdma_s2mm_0                     |         1|
+|6     |system_fifo_mm2s_0                     |         1|
+|7     |system_fifo_s2mm_0                     |         1|
+|8     |system_ov7670_decode_stream_0_0        |         1|
+|9     |system_processing_system7_0_0          |         1|
+|10    |system_rst_ov7670_pclk_0               |         1|
+|11    |system_rst_processing_system7_0_100M_0 |         1|
+|12    |system_rst_vga_clk25_0                 |         1|
+|13    |system_stream_to_vga_0_0               |         1|
+|14    |system_vdma_mm2s_0                     |         1|
+|15    |system_vdma_s2mm_0                     |         1|
 +------+---------------------------------------+----------+
 
 Report Cell Usage: 
@@ -766,29 +750,28 @@ Report Cell Usage:
 |2     |system_auto_pc_0                       |     1|
 |3     |system_auto_pc_1                       |     1|
 |4     |system_auto_pc_2                       |     1|
-|5     |system_axi_gpio_0_0                    |     1|
-|6     |system_fifo_mm2s_0                     |     1|
-|7     |system_fifo_s2mm_0                     |     1|
-|8     |system_ov7670_decode_stream_0_0        |     1|
-|9     |system_processing_system7_0_0          |     1|
-|10    |system_rst_ov7670_pclk_0               |     1|
-|11    |system_rst_processing_system7_0_100M_0 |     1|
-|12    |system_rst_vga_clk25_0                 |     1|
-|13    |system_stream_to_vga_0_0               |     1|
-|14    |system_vdma_mm2s_0                     |     1|
-|15    |system_vdma_s2mm_0                     |     1|
-|16    |system_xbar_0                          |     1|
-|17    |IBUF                                   |    11|
-|18    |IOBUF                                  |     2|
-|19    |OBUF                                   |    17|
+|5     |system_fifo_mm2s_0                     |     1|
+|6     |system_fifo_s2mm_0                     |     1|
+|7     |system_ov7670_decode_stream_0_0        |     1|
+|8     |system_processing_system7_0_0          |     1|
+|9     |system_rst_ov7670_pclk_0               |     1|
+|10    |system_rst_processing_system7_0_100M_0 |     1|
+|11    |system_rst_vga_clk25_0                 |     1|
+|12    |system_stream_to_vga_0_0               |     1|
+|13    |system_vdma_mm2s_0                     |     1|
+|14    |system_vdma_s2mm_0                     |     1|
+|15    |system_xbar_0                          |     1|
+|16    |IBUF                                   |    11|
+|17    |IOBUF                                  |     2|
+|18    |OBUF                                   |    17|
 +------+---------------------------------------+------+
 
 Report Instance Areas: 
 +------+-----------------------+----------------------------+------+
 |      |Instance               |Module                      |Cells |
 +------+-----------------------+----------------------------+------+
-|1     |top                    |                            |  1968|
-|2     |  system_i             |system                      |  1938|
+|1     |top                    |                            |  1927|
+|2     |  system_i             |system                      |  1897|
 |3     |    axi_periph         |system_axi_periph_0         |   758|
 |4     |      m01_couplers     |m01_couplers_imp_13D45HT    |    96|
 |5     |      s00_couplers     |s00_couplers_imp_5M10I9     |   177|
@@ -800,28 +783,28 @@ Report Instance Areas:
 |11    |      s00_couplers     |s00_couplers_imp_1KTB6MO    |   135|
 +------+-----------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 963.504 ; gain = 355.430
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 967.887 ; gain = 360.688
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 963.504 ; gain = 267.594
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 963.504 ; gain = 355.430
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 967.887 ; gain = 267.098
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 967.887 ; gain = 360.688
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 988.852 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 988.957 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-88 Infos, 126 Warnings, 0 Critical Warnings and 0 Errors encountered.
+86 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 988.852 ; gain = 665.848
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 988.852 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 988.957 ; gain = 667.012
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 988.957 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.runs/synth_1/system_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 28 12:03:09 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 28 16:56:29 2022...

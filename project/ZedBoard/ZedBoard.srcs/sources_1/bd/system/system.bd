@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x9670D3A7FD5729D7",
+      "boundary_crc": "0x1D6DE197051C0012",
       "device": "xc7z020clg484-1",
       "name": "system",
       "synth_flow_mode": "Hierarchical",
@@ -42,8 +42,7 @@
         "s00_couplers": {
           "auto_pc": ""
         }
-      },
-      "axi_gpio_0": ""
+      }
     },
     "interface_ports": {
       "DDR": {
@@ -113,10 +112,6 @@
       "IIC_0": {
         "mode": "Master",
         "vlnv": "xilinx.com:interface:iic_rtl:1.0"
-      },
-      "sws_8bits": {
-        "mode": "Master",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
       }
     },
     "ports": {
@@ -524,16 +519,16 @@
               }
             },
             "interface_nets": {
-              "auto_cc_to_m01_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_cc/M_AXI"
-                ]
-              },
               "m01_couplers_to_auto_cc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_cc/S_AXI"
+                ]
+              },
+              "auto_cc_to_m01_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_cc/M_AXI"
                 ]
               }
             },
@@ -674,6 +669,30 @@
           }
         },
         "interface_nets": {
+          "m03_couplers_to_axi_periph": {
+            "interface_ports": [
+              "M03_AXI",
+              "m03_couplers/M_AXI"
+            ]
+          },
+          "xbar_to_m02_couplers": {
+            "interface_ports": [
+              "xbar/M02_AXI",
+              "m02_couplers/S_AXI"
+            ]
+          },
+          "xbar_to_m01_couplers": {
+            "interface_ports": [
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
+          "m02_couplers_to_axi_periph": {
+            "interface_ports": [
+              "M02_AXI",
+              "m02_couplers/M_AXI"
+            ]
+          },
           "axi_periph_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
@@ -702,30 +721,6 @@
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
-            ]
-          },
-          "m02_couplers_to_axi_periph": {
-            "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
-            ]
-          },
-          "m03_couplers_to_axi_periph": {
-            "interface_ports": [
-              "M03_AXI",
-              "m03_couplers/M_AXI"
             ]
           },
           "xbar_to_m03_couplers": {
@@ -2258,18 +2253,6 @@
             ]
           }
         }
-      },
-      "axi_gpio_0": {
-        "vlnv": "xilinx.com:ip:axi_gpio:2.0",
-        "xci_name": "system_axi_gpio_0_0",
-        "parameters": {
-          "GPIO_BOARD_INTERFACE": {
-            "value": "sws_8bits"
-          },
-          "USE_BOARD_FLOW": {
-            "value": "true"
-          }
-        }
       }
     },
     "interface_nets": {
@@ -2279,16 +2262,10 @@
           "processing_system7_0/DDR"
         ]
       },
-      "fifo_mm2s_M_AXIS": {
+      "processing_system7_0_IIC_0": {
         "interface_ports": [
-          "fifo_mm2s/M_AXIS",
-          "stream_to_vga_0/rgb_in"
-        ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
+          "IIC_0",
+          "processing_system7_0/IIC_0"
         ]
       },
       "processing_system7_0_M_AXI_GP0": {
@@ -2297,22 +2274,58 @@
           "processing_system7_0/M_AXI_GP0"
         ]
       },
+      "microblaze_0_axi_periph_M01_AXI": {
+        "interface_ports": [
+          "axi_periph/M01_AXI",
+          "ov7670_decode_stream_0/S00_AXI"
+        ]
+      },
+      "microblaze_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "axi_periph/M00_AXI",
+          "vdma_s2mm/S_AXI_LITE"
+        ]
+      },
+      "fifo_mm2s_M_AXIS": {
+        "interface_ports": [
+          "fifo_mm2s/M_AXIS",
+          "stream_to_vga_0/rgb_in"
+        ]
+      },
+      "axi_vdma_1_M_AXIS_MM2S": {
+        "interface_ports": [
+          "fifo_mm2s/S_AXIS",
+          "vdma_mm2s/M_AXIS_MM2S"
+        ]
+      },
       "fifo_generator_0_M_AXIS": {
         "interface_ports": [
           "fifo_s2mm/M_AXIS",
           "vdma_s2mm/S_AXIS_S2MM"
         ]
       },
-      "axi_periph_M03_AXI": {
+      "axi_vdma_1_M_AXI_MM2S": {
         "interface_ports": [
-          "axi_periph/M03_AXI",
-          "axi_gpio_0/S_AXI"
+          "vdma_mm2s/M_AXI_MM2S",
+          "vdma_mm2s_intercon/S00_AXI"
         ]
       },
-      "axi_gpio_0_GPIO": {
+      "processing_system7_0_FIXED_IO": {
         "interface_ports": [
-          "sws_8bits",
-          "axi_gpio_0/GPIO"
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "microblaze_0_axi_periph_M02_AXI": {
+        "interface_ports": [
+          "axi_periph/M02_AXI",
+          "vdma_mm2s/S_AXI_LITE"
+        ]
+      },
+      "ov7670_decode_stream_0_axis_out": {
+        "interface_ports": [
+          "fifo_s2mm/S_AXIS",
+          "ov7670_decode_stream_0/axis_out"
         ]
       },
       "axi_mem_intercon_M00_AXI1": {
@@ -2331,48 +2344,6 @@
         "interface_ports": [
           "vdma_s2mm/M_AXI_S2MM",
           "vdma_s2mm_intercon/S00_AXI"
-        ]
-      },
-      "processing_system7_0_IIC_0": {
-        "interface_ports": [
-          "IIC_0",
-          "processing_system7_0/IIC_0"
-        ]
-      },
-      "microblaze_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "axi_periph/M01_AXI",
-          "ov7670_decode_stream_0/S00_AXI"
-        ]
-      },
-      "axi_vdma_1_M_AXIS_MM2S": {
-        "interface_ports": [
-          "fifo_mm2s/S_AXIS",
-          "vdma_mm2s/M_AXIS_MM2S"
-        ]
-      },
-      "axi_vdma_1_M_AXI_MM2S": {
-        "interface_ports": [
-          "vdma_mm2s/M_AXI_MM2S",
-          "vdma_mm2s_intercon/S00_AXI"
-        ]
-      },
-      "microblaze_0_axi_periph_M02_AXI": {
-        "interface_ports": [
-          "axi_periph/M02_AXI",
-          "vdma_mm2s/S_AXI_LITE"
-        ]
-      },
-      "ov7670_decode_stream_0_axis_out": {
-        "interface_ports": [
-          "fifo_s2mm/S_AXIS",
-          "ov7670_decode_stream_0/axis_out"
-        ]
-      },
-      "microblaze_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "axi_periph/M00_AXI",
-          "vdma_s2mm/S_AXI_LITE"
         ]
       }
     },
@@ -2422,7 +2393,6 @@
           "vdma_s2mm_intercon/ACLK",
           "vdma_s2mm_intercon/M00_ACLK",
           "vdma_s2mm_intercon/S00_ACLK",
-          "axi_gpio_0/s_axi_aclk",
           "axi_periph/M03_ACLK"
         ]
       },
@@ -2497,7 +2467,6 @@
           "vdma_s2mm/axi_resetn",
           "vdma_s2mm_intercon/M00_ARESETN",
           "vdma_s2mm_intercon/S00_ARESETN",
-          "axi_gpio_0/s_axi_aresetn",
           "axi_periph/M03_ARESETN"
         ]
       },
@@ -2557,11 +2526,6 @@
             "range": "4G",
             "width": "32",
             "segments": {
-              "SEG_axi_gpio_0_Reg": {
-                "address_block": "/axi_gpio_0/S_AXI/Reg",
-                "offset": "0x41200000",
-                "range": "64K"
-              },
               "SEG_ov7670_decode_stream_0_S00_AXI_reg": {
                 "address_block": "/ov7670_decode_stream_0/S00_AXI/S00_AXI_reg",
                 "offset": "0x43C00000",

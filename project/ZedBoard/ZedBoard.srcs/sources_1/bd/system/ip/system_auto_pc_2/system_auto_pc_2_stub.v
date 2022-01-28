@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Fri Jan 28 11:59:59 2022
+// Date        : Fri Jan 28 11:59:58 2022
 // Host        : Pavel-PC running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_pc_2/system_auto_pc_2_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_auto_pc_2 -prefix
+//               system_auto_pc_2_ system_auto_pc_2_stub.v
 // Design      : system_auto_pc_2
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

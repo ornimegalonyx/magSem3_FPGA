@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Jan 28 12:03:09 2022
+| Date         : Fri Jan 28 16:56:29 2022
 | Host         : Pavel-PC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
 | Design       : system_wrapper
@@ -169,7 +169,6 @@ Table of Contents
 | system_ov7670_decode_stream_0_0        |    1 |
 | system_fifo_s2mm_0                     |    1 |
 | system_fifo_mm2s_0                     |    1 |
-| system_axi_gpio_0_0                    |    1 |
 | system_auto_pc_2                       |    1 |
 | system_auto_pc_1                       |    1 |
 | system_auto_pc_0                       |    1 |

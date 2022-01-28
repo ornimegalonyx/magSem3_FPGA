@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 -- Date        : Fri Jan 28 11:59:21 2022
 -- Host        : Pavel-PC running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/work/miet/mag_sem_3/magSem3_FPGA/project/ZedBoard/ZedBoard.srcs/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top system_auto_cc_0 -prefix
+--               system_auto_cc_0_ system_auto_cc_0_sim_netlist.vhdl
 -- Design      : system_auto_cc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity system_auto_cc_0_xpm_cdc_single is
   attribute DEST_SYNC_FF of system_auto_cc_0_xpm_cdc_single : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of system_auto_cc_0_xpm_cdc_single : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_auto_cc_0_xpm_cdc_single : entity is "xpm_cdc_single";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of system_auto_cc_0_xpm_cdc_single : entity is 0;
   attribute SRC_INPUT_REG : integer;
@@ -771,8 +769,6 @@ entity system_auto_cc_0_xpm_cdc_handshake is
   attribute DEST_SYNC_FF of system_auto_cc_0_xpm_cdc_handshake : entity is 3;
   attribute INIT_SYNC_FF : integer;
   attribute INIT_SYNC_FF of system_auto_cc_0_xpm_cdc_handshake : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_auto_cc_0_xpm_cdc_handshake : entity is "xpm_cdc_handshake";
   attribute SIM_ASSERT_CHK : integer;
   attribute SIM_ASSERT_CHK of system_auto_cc_0_xpm_cdc_handshake : entity is 0;
   attribute SRC_SYNC_FF : integer;
@@ -2916,8 +2912,6 @@ entity system_auto_cc_0_axi_clock_converter_v2_1_18_lite_async is
     m_axi_arready : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_auto_cc_0_axi_clock_converter_v2_1_18_lite_async : entity is "axi_clock_converter_v2_1_18_lite_async";
 end system_auto_cc_0_axi_clock_converter_v2_1_18_lite_async;
 
 architecture STRUCTURE of system_auto_cc_0_axi_clock_converter_v2_1_18_lite_async is
@@ -4698,8 +4692,6 @@ entity system_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter is
   attribute C_W_WIDTH of system_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter : entity is 36;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter : entity is "axi_clock_converter_v2_1_18_axi_clock_converter";
   attribute P_ACLK_RATIO : integer;
   attribute P_ACLK_RATIO of system_auto_cc_0_axi_clock_converter_v2_1_18_axi_clock_converter : entity is 2;
   attribute P_AXI3 : integer;

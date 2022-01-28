@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Fri Jan 28 11:57:42 2022
+//Date        : Fri Jan 28 16:54:57 2022
 //Host        : Pavel-PC running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -40,7 +40,6 @@ module system_wrapper
     ov7670_reset,
     ov7670_vsync,
     ov7670_xclk,
-    sws_8bits_tri_i,
     vga_b,
     vga_g,
     vga_hsync,
@@ -76,7 +75,6 @@ module system_wrapper
   output [0:0]ov7670_reset;
   input ov7670_vsync;
   output ov7670_xclk;
-  input [7:0]sws_8bits_tri_i;
   output [3:0]vga_b;
   output [3:0]vga_g;
   output vga_hsync;
@@ -119,7 +117,6 @@ module system_wrapper
   wire [0:0]ov7670_reset;
   wire ov7670_vsync;
   wire ov7670_xclk;
-  wire [7:0]sws_8bits_tri_i;
   wire [3:0]vga_b;
   wire [3:0]vga_g;
   wire vga_hsync;
@@ -171,7 +168,6 @@ module system_wrapper
         .ov7670_reset(ov7670_reset),
         .ov7670_vsync(ov7670_vsync),
         .ov7670_xclk(ov7670_xclk),
-        .sws_8bits_tri_i(sws_8bits_tri_i),
         .vga_b(vga_b),
         .vga_g(vga_g),
         .vga_hsync(vga_hsync),
